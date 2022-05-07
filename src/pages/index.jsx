@@ -11,6 +11,7 @@ import { Col, Container, Row } from "@bootstrap";
 import slideImage from '@assets/image/body/section1/landing_image.png';
 import saleImage1 from '@assets/image/body/section1/sale_image1.png';
 import saleImage2 from '@assets/image/body/section1/sale_image2.png';
+import thirdImage from '@assets/image/body/section1/third_image.png';
 // import {client, blogsQuery, productsQuery, collectionsQuery} from "@graphql";
 
 const Home = ({ blogs, products, collections }) => {
@@ -25,17 +26,20 @@ const Home = ({ blogs, products, collections }) => {
                     <img src={slideImage.src} style={{ width: '100%', height: '100%' }} />
                 </Col>
             </Row>
-
             <Row style={{marginTop:'1%', marginRight: '0', marginLeft: '0'}}>
                 <Col lg={6} xs={6} style={{ paddingLeft: '1%',paddingRight: '0.5%'}}>
                     <img src={saleImage1.src} style={{ width: '100%', height: '100%' }} />
-
                 </Col>
                 <Col lg={6} xs={6} style={{ paddingLeft: '0.5%',paddingRight: '1%'}}>
                     <img src={saleImage2.src} style={{ width: '100%', height: '100%' }} />
-
                 </Col>
             </Row>
+            <Row style={{marginTop:'1%', marginRight: '0', marginLeft: '0'}}>
+                <Col lg={12} xs={12} style={{ paddingLeft: '0.5%',paddingRight: '1%'}}>
+                    <img src={thirdImage.src} style={{ width: '100%', height: '100%' }} />
+                </Col>
+            </Row>
+
             {/* <Slider animate={true} data={sliderData}/>
 
             <Categories categories={collections}/>
