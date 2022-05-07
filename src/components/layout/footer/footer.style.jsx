@@ -1,10 +1,13 @@
-import styled, {space, color, themeGet, devices} from "@styled";
+import styled, { space, color, themeGet, devices } from "@styled";
 
 export const CopyrightText = styled.p`
-  color: ${themeGet('colors.white')};
-  font-size: 13px;
-  font-family: ${themeGet('fonts.heading')};
-  line-height: 26px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 29px;
+  text-align: center;
+  color: ${themeGet('colors.black')};
   
   .company-name {
       color: ${themeGet('colors.white')};
@@ -24,6 +27,7 @@ export const CopyrightText = styled.p`
 `
 
 export const FooterBottomWrapper = styled.div`
+  background-color: white
   ${color}
   ${space}
 `

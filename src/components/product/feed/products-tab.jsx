@@ -9,40 +9,41 @@ import {Tab, Tabs, TabList, TabPanel} from "react-tabs";
 import {Col, Container, Row} from "@bootstrap-styled/v4";
 import {ProductNav} from "@components/product/feed/style";
 import {getFeaturedProducts, getSaleProducts, getTendingProducts} from "@utils/product";
+import { useRouter } from 'next/router';
 
 const productNav = [
     {
-        key: "new",
-        title: "New Arrival",
+        key: "shop",
+        title: "SHOP",
     },
     {
-        key: "featured",
-        title: "Featured",
+        key: "about",
+        title: "ABOUT US",
     },
     {
-        key: "sale",
-        title: "On Sale",
-    },
-    {
-        key: "tending",
-        title: "Tending",
+        key: "contact",
+        title: "CONTACT",
     }
 ]
 
 const ProductsTab = ({products, limit = 8, className}) => {
+    const router = useRouter();
     const [data, setData] = useState(products);
 
     const onHandler = (event) => {
         const target = event.target;
         const key = target.dataset.key
         switch (key) {
-            case "sale":
+            case "shop":
                 setData(getSaleProducts(products));
+                router.push('/')
                 break;
-            case "featured":
+            case "about":
+                router.push('/about')
                 setData(getFeaturedProducts(products));
                 break;
-            case "tending":
+            case "contact":
+                router.push('/contact')
                 setData(getTendingProducts(products));
                 break;
             default:
@@ -53,22 +54,11 @@ const ProductsTab = ({products, limit = 8, className}) => {
     return (
         <div className={cn(className)}>
             <Container>
-                <Row>
-                    <Col xs={12}>
-                        <SectionTitle
-                            mb={42}
-                            align="center"
-                            title="Our Products"
-                            content="Lorem ipsum dolor sit amet, consectetur adipisicing elitsed do eiusmo tempor incididunt ut labore"
-                        />
-                    </Col>
-                </Row>
-
                 {(!data) && <Loader/>}
 
                 {data && (
                     <Tabs>
-                        <ProductNav mb={[30, null, 55]} align="center">
+                        <ProductNav mb={[30, null, 55]} align="center" style={{marginBottom: 0}}>
                             <TabList>
                                 {productNav.map(item => (
                                     <Tab
@@ -81,24 +71,6 @@ const ProductsTab = ({products, limit = 8, className}) => {
                                 ))}
                             </TabList>
                         </ProductNav>
-
-                        {productNav.map(item => (
-                            <TabPanel key={item?.key}>
-                                <Row className="products-grid-mobile mtn-30">
-                                    {data?.length > 0 ? (
-                                        data?.slice(0, limit)?.map(product => (
-                                            <Col xs={6} md={4} lg={3} key={product?.node?.id}>
-                                                <ProductCard product={product?.node}/>
-                                            </Col>
-                                        ))
-                                    ) : (
-                                        <div className="w-100">
-                                            <EmptyProduct/>
-                                        </div>
-                                    )}
-                                </Row>
-                            </TabPanel>
-                        ))}
                     </Tabs>
                 )}
             </Container>

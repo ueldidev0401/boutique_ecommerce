@@ -1,9 +1,10 @@
 import Image from "next/image";
-import {IoIosHeart} from "react-icons/io";
-import {Container, Col, Row} from "@bootstrap";
-import {CopyrightText, FooterBottomWrapper} from "./footer.style";
+import { IoIosHeart } from "react-icons/io";
+import { Container, Col, Row } from "@bootstrap";
+import { CopyrightText, FooterBottomWrapper } from "./footer.style";
+import mark from '@assets/image/footer/footer_fist.png';
 
-const FooterBottom = ({bg}) => {
+const FooterBottom = ({ bg }) => {
     return (
         <FooterBottomWrapper
             bg={bg}
@@ -12,21 +13,16 @@ const FooterBottom = ({bg}) => {
         >
             <Container>
                 <Row className="flex-sm-row-reverse">
-                    <Col md={6} className="text-center text-md-right">
-                        <div className="payment-link">
-                            <Image
-                                src="/images/icons/payment.png"
-                                alt="Payment Method"
-                                width={243}
-                                height={21}
-                            />
-                        </div>
+                    <Col md={3} className="text-center text-md-left">
+                        
                     </Col>
-
                     <Col md={6} className="text-center text-md-left">
                         <CopyrightText>
-                            © 2021, Furns. Made With <IoIosHeart/> by <a className="company-name" href="https://hasthemes.com/"> HasThemes.</a>
+                            © 2022 mysouq. All rights reserved
                         </CopyrightText>
+                    </Col>
+                    <Col md={3} className="text-center text-md-left">
+                        <img src={mark.src} />
                     </Col>
                 </Row>
             </Container>

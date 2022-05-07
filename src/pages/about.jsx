@@ -1,85 +1,74 @@
 import Head from "next/head";
-import settings from "@data/settings";
 import Layout from "@components/layout";
 import Image from "@components/ui/image";
 import {Container, Col, Row} from "@bootstrap";
 import Breadcrumb from "@components/ui/breadcrumb";
+import slideImage from '@assets/image/body/section1/landing_image.png';
+import settings from "@data/settings.json";
+import saleImage1 from '@assets/image/body/section1/sale_image1.png';
+import saleImage2 from '@assets/image/body/section1/sale_image2.png';
+import thirdImage from '@assets/image/body/section1/third_image.png';
+import { ProductsTab } from "@components/product/feed";
 
-const AboutPage = () => {
+const AboutPage = ({ blogs, products, collections }) => {
     return (
         <Layout>
             <Head>
-                <title>{"About :: " + settings?.title}</title>
-                <meta name="description" content={settings?.description}/>
+                <title>{settings?.title}</title>
+                <meta name="description" content={settings?.description} />
             </Head>
+            <Row style={{ margin: 0 }}>
+                <Col lg={12} xs={12} style={{ padding: 0 }}>
+                    <img src={slideImage.src} style={{ width: '100%', height: '100%' }} />
+                </Col>
+            </Row>
+            <Row style={{ marginTop: '1%', marginRight: '0', marginLeft: '0' }}>
+                <Col lg={6} xs={6} style={{ paddingLeft: '1%', paddingRight: '0.5%' }}>
+                    <img src={saleImage1.src} style={{ width: '100%', height: '100%' }} />
+                </Col>
+                <Col lg={6} xs={6} style={{ paddingLeft: '0.5%', paddingRight: '1%' }}>
+                    <img src={saleImage2.src} style={{ width: '100%', height: '100%' }} />
+                </Col>
+            </Row>
+            <Row style={{ marginTop: '1%', marginRight: '0', marginLeft: '0' }}>
+                <Col lg={12} xs={12} style={{ paddingLeft: '0.5%', paddingRight: '1%' }}>
+                    <img src={thirdImage.src} style={{ width: '100%', height: '100%' }} />
+                </Col>
+            </Row>
+            <ProductsTab products={products} limit={8} />
+            <hr />
 
-            <Breadcrumb
-                py={[40, 80]}
-                mb={[60, null, 100]}
-                pageTitle="About Us"
-            />
+            <h1>
+                About Us
+            </h1>
+            {/* <Slider animate={true} data={sliderData}/>
 
+            <Categories categories={collections}/>
 
-            <section className="about-page-wrapper">
-                <Container>
-                    <h2>Furns is a global furniture destination for somethings. We sell cutting-edge furniture and offer
-                        a wide variety of fashion-related content.</h2>
-                </Container>
+            <ProductsTab products={products} limit={8}/>
 
-                <Container fluid className="mt-3 mt-md-5">
-                    <Row>
-                        <Col md={6}>
-                            <figure>
-                                <Image
-                                    width={950}
-                                    height={600}
-                                    alt={settings?.title}
-                                    src="/images/about/02.jpg"
-                                />
-                            </figure>
-                        </Col>
+            <Promotions/>
 
-                        <Col md={6}>
-                            <figure>
-                                <Image
-                                    width={950}
-                                    height={600}
-                                    alt={settings?.title}
-                                    src="/images/about/01.jpg"
-                                />
-                            </figure>
-                        </Col>
-                    </Row>
-                </Container>
-
-                <Container className="mt-3 mt-md-5">
-                    <Row>
-                        <Col lg={6} className="mb-5 mb-lg-0">
-                            <div className="about-store">
-                                <h4>OUR STORES</h4>
-                                <p>Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                                    irure dolor in reprehenderit in voluptate velit esse. Lorem ipsum dolor sit amet
-                                    conse ctetur adipisicing elit, sed do eiusmod tempor.</p>
-                            </div>
-                        </Col>
-
-                        <Col lg={6}>
-                            <div className="about-store">
-                                <h4>OUR MISSION</h4>
-                                <p>Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                                    irure dolor in reprehenderit in voluptate velit esse. Lorem ipsum dolor sit amet
-                                    conse ctetur adipisicing elit, sed do eiusmod tempor.</p>
-                            </div>
-                        </Col>
-                    </Row>
-                </Container>
-            </section>
+            <LatestBlog posts={blogs} pt={[60, 60, 100]}/> */}
         </Layout>
     );
+};
+export const getStaticProps = async () => {
+    // const blogsData = await client(blogsQuery(4)),
+    // blogs = blogsData?.blogs?.edges[0]?.node?.articles?.edges,
+    // productsData = await client(productsQuery(50)),
+    // products = productsData?.products?.edges,
+    // collectionsData = await client(collectionsQuery(5)),
+    // collections = collectionsData?.collections?.edges;
+
+    return {
+        props: {
+            blogs: [],
+            products: [],
+            collections: [],
+        },
+        revalidate: 60,
+    };
 };
 
 export default AboutPage;

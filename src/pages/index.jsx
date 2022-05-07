@@ -21,25 +21,26 @@ const Home = ({ blogs, products, collections }) => {
                 <title>{settings?.title}</title>
                 <meta name="description" content={settings?.description} />
             </Head>
-            <Row style={{ margin: 0}}>
+            <Row style={{ margin: 0 }}>
                 <Col lg={12} xs={12} style={{ padding: 0 }}>
                     <img src={slideImage.src} style={{ width: '100%', height: '100%' }} />
                 </Col>
             </Row>
-            <Row style={{marginTop:'1%', marginRight: '0', marginLeft: '0'}}>
-                <Col lg={6} xs={6} style={{ paddingLeft: '1%',paddingRight: '0.5%'}}>
+            <Row style={{ marginTop: '1%', marginRight: '0', marginLeft: '0' }}>
+                <Col lg={6} xs={6} style={{ paddingLeft: '1%', paddingRight: '0.5%' }}>
                     <img src={saleImage1.src} style={{ width: '100%', height: '100%' }} />
                 </Col>
-                <Col lg={6} xs={6} style={{ paddingLeft: '0.5%',paddingRight: '1%'}}>
+                <Col lg={6} xs={6} style={{ paddingLeft: '0.5%', paddingRight: '1%' }}>
                     <img src={saleImage2.src} style={{ width: '100%', height: '100%' }} />
                 </Col>
             </Row>
-            <Row style={{marginTop:'1%', marginRight: '0', marginLeft: '0'}}>
-                <Col lg={12} xs={12} style={{ paddingLeft: '0.5%',paddingRight: '1%'}}>
+            <Row style={{ marginTop: '1%', marginRight: '0', marginLeft: '0' }}>
+                <Col lg={12} xs={12} style={{ paddingLeft: '0.5%', paddingRight: '1%' }}>
                     <img src={thirdImage.src} style={{ width: '100%', height: '100%' }} />
                 </Col>
             </Row>
-
+            <ProductsTab products={products} limit={8} />
+            <hr />
             {/* <Slider animate={true} data={sliderData}/>
 
             <Categories categories={collections}/>
