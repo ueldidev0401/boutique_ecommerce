@@ -96,44 +96,6 @@ const HeaderBottom = ({
                 </HeaderActionBtn>
               </ActionItem>
 
-              {/* <ActionItem>
-                <DropdownToggleButton
-                  color="#000"
-                  className="header-action-btn"
-                  onClick={() => setIsDropdownOpen((prevState) => !prevState)}
-                >
-                  <IoPersonOutline />
-                </DropdownToggleButton>
-                <DropdownMenu
-                  align="center"
-                  className={isDropdownOpen ? "show" : "hide"}
-                >
-                  {isLoggedIn ? (
-                    <li>
-                      <Link href="/account">My Account</Link>
-                    </li>
-                  ) : (
-                    <li>
-                      <Link href="/signin">Signin</Link>
-                    </li>
-                  )}
-                  <li>
-                    <Link href="/cart">Cart</Link>
-                  </li>
-                  <li>
-                    <Link href="/wishlist">Wishlist</Link>
-                  </li>
-                  <li>
-                    <Link href="/compare">Compare</Link>
-                  </li>
-                  {isLoggedIn && (
-                    <li>
-                      <Link href="/logout">Logout</Link>
-                    </li>
-                  )}
-                </DropdownMenu>
-              </ActionItem> */}
-
               <ActionItem>
                 <HeaderActionBtn
                   className="pr-1"
