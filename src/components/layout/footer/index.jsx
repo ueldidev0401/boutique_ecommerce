@@ -5,7 +5,7 @@ import FooterBottom from "@components/layout/footer/footer-bottom";
 const Footer = (props) => {
     return (
         <FooterWrap {...props}>
-            <FooterWidget bg="secondary" color="white"/>
+            {/* <FooterWidget bg="secondary" color="white"/> */}
             <FooterBottom bg="heading"/>
         </FooterWrap>
     );

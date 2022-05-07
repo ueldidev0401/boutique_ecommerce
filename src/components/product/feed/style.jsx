@@ -17,18 +17,23 @@ export const ProductNav = styled.div`
     color: ${themeGet('colors.text')};
     transition: ${themeGet('transition')};
     font-family: ${themeGet('fonts.body')};
-    font-weight: ${themeGet('fontWeights.subHeading')};
     
     ${devices.xs}{
       margin-right: 10px;
       font-size: ${themeGet('fontSizes.body')};
     }
     
-
     &:hover, &.react-tabs__tab--selected {
-      color: ${themeGet('colors.primary')};
+      color: #000;
     }
   }
+
+  li:hover {
+    font-weight: ${themeGet('fontWeights.subHeading')};
+    text-decoration: underline;
+    text-decoration-color: red;
+    text-underline-offset: 13px;
+}
 
   ${({align}) => align === "center" && css`
     text-align: center;
