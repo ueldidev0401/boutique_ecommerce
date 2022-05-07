@@ -1,0 +1,35 @@
+.custom-categories {
+    display: flex;
+    height: 53px;
+    flex-direction: row;
+    width: 100%;
+}
+
+.custom-categories-button {
+    width: 18% !important;
+    background-color: #9D9999;
+    height: 100%;
+    color: white;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 20px;
+    /* identical to box height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.custom-categories-detail {
+    width: 82% !important;
+    height: 100%;
+}
+
+.card {
+    font-weight: 400;
+    border: 0;
+    -webkit-box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+}

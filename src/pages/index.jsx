@@ -13,7 +13,8 @@ import saleImage1 from '@assets/image/body/section1/sale_image1.png';
 import saleImage2 from '@assets/image/body/section1/sale_image2.png';
 import thirdImage from '@assets/image/body/section1/third_image.png';
 // import {client, blogsQuery, productsQuery, collectionsQuery} from "@graphql";
-
+import CustomCard from '../components/customCard/index';
+import CustomCategories from "@components/customcategories";
 const Home = ({ blogs, products, collections }) => {
     return (
         <Layout>
@@ -41,8 +42,25 @@ const Home = ({ blogs, products, collections }) => {
             </Row>
             <ProductsTab products={products} limit={8} />
             <hr />
-            {/* <Slider animate={true} data={sliderData}/>
+            <CustomCategories />
 
+            <Row style={{ paddingLeft: '6%', paddingRight: '6%', marginBottom: '53px', width: '100%', marginRight: 0 }}>
+                <Col sm={3}>
+                    <CustomCard stuff={{ photoUrl: saleImage2.src, title: 'title', brief: 'brief', size: 'S, M, L, XL, 2XL', price: '$33', oldPrice: '$44' }} />
+                </Col>
+                <Col sm={3}>
+                    <CustomCard stuff={{ photoUrl: saleImage2.src, title: 'title', brief: 'brief', size: 'S, M, L, XL, 2XL', price: '$33', oldPrice: '$44' }} />
+                </Col>
+                <Col sm={3}>
+                    <CustomCard stuff={{ photoUrl: saleImage2.src, title: 'title', brief: 'brief', size: 'S, M, L, XL, 2XL', price: '$33', oldPrice: '$44' }} />
+                </Col>
+                <Col sm={3}>
+                    <CustomCard stuff={{ photoUrl: saleImage2.src, title: 'title', brief: 'brief', size: 'S, M, L, XL, 2XL', price: '$33', oldPrice: '$44' }} />
+                </Col>
+            </Row>
+
+            {/* <Slider animate={true} data={sliderData}/>
+ size
             <Categories categories={collections}/>
 
             <ProductsTab products={products} limit={8}/>
