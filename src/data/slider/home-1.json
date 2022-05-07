@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "subtitle": "New Products",
+    "title": "Flexible Chair",
+    "content": "Torem ipsum dolor sit amet, consectetur adipisicing elitsed do eiusmo tempor incididunt ut labore et dolore magna",
+    "thumb": "/images/slider-image/slider-1.png"
+  },
+  {
+    "id": 2,
+    "subtitle": "Best Seller",
+    "title": "Creative Sofa",
+    "content": "Torem ipsum dolor sit amet, consectetur adipisicing elitsed do eiusmo tempor incididunt ut labore et dolore magna",
+    "thumb": "/images/slider-image/slider-2.png"
+  }
+]

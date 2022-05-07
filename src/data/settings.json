@@ -1,0 +1,33 @@
+{
+  "title": "Furns - Furniture React eCommerce Template",
+  "description": "Furniture React eCommerce Template",
+  "languages" : [
+    {"value": "dutch", "label": "Dutch"},
+    {"value": "arabic", "label": "Arabic"},
+    {"value": "english", "label": "English"},
+    {"value": "bengali", "label": "Bengali"},
+    {"value": "italian", "label": "Italian"}
+  ],
+
+  "currencies" : [
+    {"value": "usd", "label": "USD"},
+    {"value": "bdt", "label": "BDT"},
+    {"value": "eur", "label": "EURO"},
+    {"value": "omr", "label": "OMR"}
+  ],
+
+  "countries": [
+    {"value": "afghanistan", "label": "Afghanistan"},
+    {"value": "aus", "label": "Australia"},
+    {"value": "bd", "label": "Bangladesh"},
+    {"value": "india", "label": "India"},
+    {"value": "uk", "label": "United Kingdom"},
+    {"value": "us", "label": "United State"}
+  ],
+
+  "state": [
+    {"value": "dhaka", "label": "Dhaka"},
+    {"value": "ny", "label": "New York"},
+    {"value": "kolkata", "label": "Kolkata"}
+  ]
+}

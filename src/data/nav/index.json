@@ -1,0 +1,96 @@
+[
+  {
+    "text": "Home",
+    "link": "/",
+    "submenu": [
+      {
+        "list": [
+          {
+            "text": "Home 1",
+            "link": "/"
+          },
+          {
+            "text": "Home 2",
+            "link": "/home-2"
+          }
+        ]
+      }
+    ],
+    "mega_menu": false
+  },
+  {
+    "text": "About",
+    "link": "/about",
+    "mega_menu": false
+  },
+  {
+    "text": "Home Furniture",
+    "link": "/",
+    "submenu": [
+      {
+        "list": [
+          {
+            "text": "Bedroom",
+            "link": "/collection/bedroom"
+          },
+          {
+            "text": "Dining",
+            "link": "/collection/dining"
+          },
+          {
+            "text": "Living",
+            "link": "/collection/living"
+          }
+        ]
+      }
+    ],
+    "mega_menu": false
+  },
+  {
+    "text": "Office Furniture",
+    "link": "/",
+    "submenu": [
+      {
+        "list": [
+          {
+            "text": "Lounge",
+            "link": "/collection/lounge"
+          },
+          {
+            "text": "Office Chair",
+            "link": "/collection/office-chair"
+          },
+          {
+            "text": "Office Table",
+            "link": "/collection/office-table"
+          }
+        ]
+      }
+    ],
+    "mega_menu": false
+  },
+  {
+    "text": "Hospital Furniture",
+    "link": "/",
+    "submenu": [
+      {
+        "list": [
+          {
+            "text": "Hospital Bed",
+            "link": "/collection/hospital-bed"
+          },
+          {
+            "text": "Hospital Utility",
+            "link": "/collection/hospital-utility"
+          }
+        ]
+      }
+    ],
+    "mega_menu": false
+  },
+  {
+    "text": "Contact",
+    "link": "/contact",
+    "mega_menu": false
+  }
+]

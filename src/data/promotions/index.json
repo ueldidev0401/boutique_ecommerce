@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "title": "Sale Furniture <br> For Summer",
+    "content": "Great Discounts Here",
+    "thumb": "/images/banner/1.jpg",
+    "slug": "/shop",
+    "align": "right"
+  },
+  {
+    "id": 2,
+    "title": "Office Chair  <br> For Best Offer",
+    "content": "Great Discounts Here",
+    "thumb": "/images/banner/2.jpg",
+    "slug": "/shop",
+    "align": "left"
+  }
+]
