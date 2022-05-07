@@ -40,7 +40,6 @@ const Home = ({ blogs, products, collections }) => {
                 </Col>
             </Row>
             <ProductsTab products={products} limit={8} />
-            <hr />
             {/* <Slider animate={true} data={sliderData}/>
 
             <Categories categories={collections}/>
