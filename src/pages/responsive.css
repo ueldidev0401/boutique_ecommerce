@@ -1,3 +1,7 @@
+footer {
+    background-color: #F2F2F2;
+}
+
 .custom-categories {
     display: flex;
     height: 53px;
@@ -32,4 +36,50 @@
     border: 0;
     -webkit-box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
     box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+    transition: margin-top 0.3s;
+}
+
+.card:hover {
+    /* background-color: red; */
+    margin-top: -10px;
+    box-shadow: 0 10px 16px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+    
+}
+
+.alice-carousel__stage-item {
+    padding-left: 10px;
+    padding-right: 10px;
+    box-sizing: border-box;
+}
+
+.alice-carousel__next-btn {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    text-align: right;
+}
+
+.alice-carousel__prev-btn {
+    position: absolute;
+    top: 0;
+    text-align: left;
+}
+
+.alice-carousel__dots {
+    display: none;
+}
+
+.oneline {
+    display: flex;
+    padding: 30px;
+}
+
+
+.filter {
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.custom-carousel {
+    width: 100% !important;
 }

@@ -25,7 +25,8 @@ import "@fontsource/open-sans/600.css";
 import "@fontsource/open-sans/700.css";
 import "@fontsource/montserrat";
 import "@fontsource/montserrat/500.css";
-
+// import 'react-alice-carousel/lib/alice-carousel.css';
+import 'react-multi-carousel/lib/styles.css';
 // Customize Bootstrap
 const themeBootstrap = {
   "$container-max-widths": {
