@@ -12,9 +12,12 @@ import slideImage from '@assets/image/body/section1/landing_image.png';
 import saleImage1 from '@assets/image/body/section1/sale_image1.png';
 import saleImage2 from '@assets/image/body/section1/sale_image2.png';
 import thirdImage from '@assets/image/body/section1/third_image.png';
+import nikeImage from '@assets/image/body/section2/nike_img.png';
 // import {client, blogsQuery, productsQuery, collectionsQuery} from "@graphql";
 import CustomCard from '../components/customCard/index';
 import CustomCategories from "@components/customcategories";
+import FilterBy from "@components/filterBy";
+import { BsChevronUp } from 'react-icons/bs';
 const Home = ({ blogs, products, collections }) => {
     return (
         <Layout>
@@ -42,23 +45,102 @@ const Home = ({ blogs, products, collections }) => {
             </Row>
             <ProductsTab products={products} limit={8} />
             <hr />
-            <CustomCategories />
-
-            <Row style={{ paddingLeft: '6%', paddingRight: '6%', marginBottom: '53px', width: '100%', marginRight: 0 }}>
-                <Col sm={3}>
-                    <CustomCard stuff={{ photoUrl: saleImage2.src, title: 'title', brief: 'brief', size: 'S, M, L, XL, 2XL', price: '$33', oldPrice: '$44' }} />
-                </Col>
-                <Col sm={3}>
-                    <CustomCard stuff={{ photoUrl: saleImage2.src, title: 'title', brief: 'brief', size: 'S, M, L, XL, 2XL', price: '$33', oldPrice: '$44' }} />
-                </Col>
-                <Col sm={3}>
-                    <CustomCard stuff={{ photoUrl: saleImage2.src, title: 'title', brief: 'brief', size: 'S, M, L, XL, 2XL', price: '$33', oldPrice: '$44' }} />
-                </Col>
-                <Col sm={3}>
-                    <CustomCard stuff={{ photoUrl: saleImage2.src, title: 'title', brief: 'brief', size: 'S, M, L, XL, 2XL', price: '$33', oldPrice: '$44' }} />
-                </Col>
+                <CustomCategories />
+            <Row style={{ paddingLeft: '9%', paddingRight: '9%', marginBottom: '53px', width: '100%', marginRight: 0 }}>
+                <FilterBy />
             </Row>
 
+            <Row style={{ paddingLeft: '9%', paddingRight: '9%', marginBottom: '53px', width: '100%', marginRight: 0 }}>
+                <Col sm={3} style={{ display: 'flex', justifyContent: 'center' }} >
+                    <div style={{ width: '267px', height: '409px' }}>
+                        <CustomCard stuff={{ photoUrl: nikeImage.src, title: 'NIKE', brief: 'Sportsware smooth men\'s Semi-Brushed Back Fleece Sweater', size: 'S, M, L, XL, 2XL', price: '$33', oldPrice: '$44' }} />
+                    </div>
+                </Col>
+                <Col sm={3} style={{ display: 'flex', justifyContent: 'center' }} >
+                    <div style={{ width: '267px', height: '409px' }}>
+                        <CustomCard stuff={{ photoUrl: nikeImage.src, title: 'NIKE', brief: 'Sportsware smooth men\'s Semi-Brushed Back Fleece Sweater', size: 'S, M, L, XL, 2XL', price: '$33', oldPrice: '$44' }} />
+                    </div>
+                </Col>
+                <Col sm={3} style={{ display: 'flex', justifyContent: 'center' }} >
+                    <div style={{ width: '267px', height: '409px' }}>
+                        <CustomCard stuff={{ photoUrl: nikeImage.src, title: 'NIKE', brief: 'Sportsware smooth men\'s Semi-Brushed Back Fleece Sweater', size: 'S, M, L, XL, 2XL', price: '$33', oldPrice: '$44' }} />
+                    </div>
+                </Col>
+                <Col sm={3} style={{ display: 'flex', justifyContent: 'center' }} >
+                    <div style={{ width: '267px', height: '409px' }}>
+                        <CustomCard stuff={{ photoUrl: nikeImage.src, title: 'NIKE', brief: 'Sportsware smooth men\'s Semi-Brushed Back Fleece Sweater', size: 'S, M, L, XL, 2XL', price: '$33', oldPrice: '$44' }} />
+                    </div>
+                </Col>
+            </Row>
+            
+            <Row style={{ paddingLeft: '9%', paddingRight: '9%', marginBottom: '53px', width: '100%', marginRight: 0 }}>
+                <Col sm={3} style={{ display: 'flex', justifyContent: 'center' }} >
+                    <div style={{ width: '267px', height: '409px' }}>
+                        <CustomCard stuff={{ photoUrl: nikeImage.src, title: 'NIKE', brief: 'Sportsware smooth men\'s Semi-Brushed Back Fleece Sweater', size: 'S, M, L, XL, 2XL', price: '$33', oldPrice: '$44' }} />
+                    </div>
+                </Col>
+                <Col sm={3} style={{ display: 'flex', justifyContent: 'center' }} >
+                    <div style={{ width: '267px', height: '409px' }}>
+                        <CustomCard stuff={{ photoUrl: nikeImage.src, title: 'NIKE', brief: 'Sportsware smooth men\'s Semi-Brushed Back Fleece Sweater', size: 'S, M, L, XL, 2XL', price: '$33', oldPrice: '$44' }} />
+                    </div>
+                </Col>
+                <Col sm={3} style={{ display: 'flex', justifyContent: 'center' }} >
+                    <div style={{ width: '267px', height: '409px' }}>
+                        <CustomCard stuff={{ photoUrl: nikeImage.src, title: 'NIKE', brief: 'Sportsware smooth men\'s Semi-Brushed Back Fleece Sweater', size: 'S, M, L, XL, 2XL', price: '$33', oldPrice: '$44' }} />
+                    </div>
+                </Col>
+                <Col sm={3} style={{ display: 'flex', justifyContent: 'center' }} >
+                    <div style={{ width: '267px', height: '409px' }}>
+                        <CustomCard stuff={{ photoUrl: nikeImage.src, title: 'NIKE', brief: 'Sportsware smooth men\'s Semi-Brushed Back Fleece Sweater', size: 'S, M, L, XL, 2XL', price: '$33', oldPrice: '$44' }} />
+                    </div>
+                </Col>
+            </Row>
+            
+            <Row style={{ paddingLeft: '9%', paddingRight: '9%', marginBottom: '53px', width: '100%', marginRight: 0 }}>
+                <Col sm={3} style={{ display: 'flex', justifyContent: 'center' }} >
+                    <div style={{ width: '267px', height: '409px' }}>
+                        <CustomCard stuff={{ photoUrl: nikeImage.src, title: 'NIKE', brief: 'Sportsware smooth men\'s Semi-Brushed Back Fleece Sweater', size: 'S, M, L, XL, 2XL', price: '$33', oldPrice: '$44' }} />
+                    </div>
+                </Col>
+                <Col sm={3} style={{ display: 'flex', justifyContent: 'center' }} >
+                    <div style={{ width: '267px', height: '409px' }}>
+                        <CustomCard stuff={{ photoUrl: nikeImage.src, title: 'NIKE', brief: 'Sportsware smooth men\'s Semi-Brushed Back Fleece Sweater', size: 'S, M, L, XL, 2XL', price: '$33', oldPrice: '$44' }} />
+                    </div>
+                </Col>
+                <Col sm={3} style={{ display: 'flex', justifyContent: 'center' }} >
+                    <div style={{ width: '267px', height: '409px' }}>
+                        <CustomCard stuff={{ photoUrl: nikeImage.src, title: 'NIKE', brief: 'Sportsware smooth men\'s Semi-Brushed Back Fleece Sweater', size: 'S, M, L, XL, 2XL', price: '$33', oldPrice: '$44' }} />
+                    </div>
+                </Col>
+                <Col sm={3} style={{ display: 'flex', justifyContent: 'center' }} >
+                    <div style={{ width: '267px', height: '409px' }}>
+                        <CustomCard stuff={{ photoUrl: nikeImage.src, title: 'NIKE', brief: 'Sportsware smooth men\'s Semi-Brushed Back Fleece Sweater', size: 'S, M, L, XL, 2XL', price: '$33', oldPrice: '$44' }} />
+                    </div>
+                </Col>
+            </Row>
+            
+            <Row style={{ paddingLeft: '9%', paddingRight: '9%', marginBottom: '53px', width: '100%', marginRight: 0 }}>
+                <Col sm={3} style={{ display: 'flex', justifyContent: 'center' }} >
+                    <div style={{ width: '267px', height: '409px' }}>
+                        <CustomCard stuff={{ photoUrl: nikeImage.src, title: 'NIKE', brief: 'Sportsware smooth men\'s Semi-Brushed Back Fleece Sweater', size: 'S, M, L, XL, 2XL', price: '$33', oldPrice: '$44' }} />
+                    </div>
+                </Col>
+                <Col sm={3} style={{ display: 'flex', justifyContent: 'center' }} >
+                    <div style={{ width: '267px', height: '409px' }}>
+                        <CustomCard stuff={{ photoUrl: nikeImage.src, title: 'NIKE', brief: 'Sportsware smooth men\'s Semi-Brushed Back Fleece Sweater', size: 'S, M, L, XL, 2XL', price: '$33', oldPrice: '$44' }} />
+                    </div>
+                </Col>
+                <Col sm={3} style={{ display: 'flex', justifyContent: 'center' }} >
+                    <div style={{ width: '267px', height: '409px' }}>
+                        <CustomCard stuff={{ photoUrl: nikeImage.src, title: 'NIKE', brief: 'Sportsware smooth men\'s Semi-Brushed Back Fleece Sweater', size: 'S, M, L, XL, 2XL', price: '$33', oldPrice: '$44' }} />
+                    </div>
+                </Col>
+                <Col sm={3} style={{ display: 'flex', justifyContent: 'center' }} >
+                    <div style={{ width: '267px', height: '409px' }}>
+                        <CustomCard stuff={{ photoUrl: nikeImage.src, title: 'NIKE', brief: 'Sportsware smooth men\'s Semi-Brushed Back Fleece Sweater', size: 'S, M, L, XL, 2XL', price: '$33', oldPrice: '$44' }} />
+                    </div>
+                </Col>
+            </Row>
             {/* <Slider animate={true} data={sliderData}/>
  size
             <Categories categories={collections}/>
@@ -68,7 +150,20 @@ const Home = ({ blogs, products, collections }) => {
             <Promotions/>
 
             <LatestBlog posts={blogs} pt={[60, 60, 100]}/> */}
-        </Layout>
+            <div style={{
+                position: 'fixed', bottom: 144, right: 67, fontFamily: 'Saira',
+                fontStyle: 'normal',
+                fontWeight: 300,
+                fontSize: '18px',
+                lineHeight: '28px',
+                textAlign: 'center',
+                display: 'flex',
+                flexDirection: 'column'
+            }}>
+                <BsChevronUp fontSize={'40px'} color='#9D9999' />
+                TOP
+            </div>
+        </Layout >
     );
 };
 
