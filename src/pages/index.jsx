@@ -44,7 +44,6 @@ const Home = ({ blogs, products, collections }) => {
                 </Col>
             </Row>
             <ProductsTab products={products} limit={8} />
-            <hr />
                 <CustomCategories />
             <Row style={{ paddingLeft: '9%', paddingRight: '9%', marginBottom: '53px', width: '100%', marginRight: 0 }}>
                 <FilterBy />

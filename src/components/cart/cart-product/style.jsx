@@ -31,7 +31,7 @@ export const CartProMeta = styled.div`
 
 export const CartProName = styled.a`
   color: ${themeGet('colors.heading')};
-  font-weight: ${themeGet('fontWeights.subHeading')};
+  font-weight: ${themeGet('fontWeights.Heading')};
 
   &:hover {
     color: ${themeGet('colors.primary')};
