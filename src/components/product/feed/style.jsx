@@ -62,7 +62,7 @@ export const CustomInput = styled.input`
 export const ProductNav = styled.div`
   ${space}
 
-  li {
+  .lie {
     padding: 0;
     cursor: pointer;
     font-size: 18px;
@@ -89,11 +89,79 @@ export const ProductNav = styled.div`
     }
   }
 
-  li:hover,active {
+  li:hover {
     font-weight: ${themeGet("fontWeights.subHeading")};
     text-decoration: underline;
     text-decoration-color: red;
     text-underline-offset: 13px;
+  }
+  .li_active { 
+    font-weight: ${themeGet("fontWeights.subHeading")};
+    text-decoration: underline;
+    text-decoration-color: red;
+    text-underline-offset: 13px;
+  }
+  .lie_first {
+    font-weight: ${themeGet("fontWeights.subHeading")};
+    text-decoration: underline;
+    text-decoration-color: red;
+    text-underline-offset: 13px;
+
+    padding: 0;
+    cursor: pointer;
+    font-size: 18px;
+    margin-right: 30px;
+    vertical-align: top;
+    display: inline-block;
+    text-transform: capitalize;
+    color: ${themeGet("colors.text")};
+    transition: ${themeGet("transition")};
+    font-family: ${themeGet("fonts.body")};
+
+    ${devices.xs} {
+      margin-right: 10px;
+      font-size: ${themeGet("fontSizes.body")};
+    }
+
+    &:hover,
+    &.react-tabs__tab--selected {
+      color: #000;
+    }
+    .aboutus {
+      width: 80%;
+      padding-left: 40px;
+    }
+  }
+  .common{
+    font-weight: ${themeGet("fontWeights.subHeading")};
+    text-decoration: underline;
+    text-decoration-color: red;
+    text-underline-offset: 13px;
+
+    padding: 0;
+    cursor: pointer;
+    font-size: 18px;
+    margin-right: 30px;
+    vertical-align: top;
+    display: inline-block;
+    text-transform: capitalize;
+    color: ${themeGet("colors.text")};
+    transition: ${themeGet("transition")};
+    font-family: ${themeGet("fonts.body")};
+
+    ${devices.xs} {
+      margin-right: 10px;
+      font-size: ${themeGet("fontSizes.body")};
+    }
+
+    &:hover,
+    &.react-tabs__tab--selected {
+      color: #000;
+    }
+    .aboutus {
+      width: 80%;
+      padding-left: 40px;
+    }
   }
 
   ${({ align }) =>

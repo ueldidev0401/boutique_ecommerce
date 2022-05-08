@@ -7,6 +7,8 @@ import ProductCard from "@components/product/card";
 import SectionTitle from "@components/ui/section-title";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import { Col, Container, Row } from "@bootstrap-styled/v4";
+import SigninForm from "@components/auth/signin-form";
+
 import {
   ProductNav,
   LargeFontWeight,
@@ -44,24 +46,35 @@ const ProductsTab = ({ products, limit = 8, className }) => {
   const router = useRouter();
   const [data, setData] = useState(products);
   const [flag, setFlag] = useState(0);
-  const onHandler = (event) => {
-    const target = event.target;
-    const key = target.dataset.key;
+  const [nab_shop, setStyle_nabshop] = useState("lie_first");
+  const [nab_about, setStyle] = useState("lie");
+  const [nab_contact, setStyle_nabcontact] = useState("lie");
+//   const [nab_about, setStyle_about] = useState("li");
+//   const [nab_contact, setStyle_contact] = useState("li");
+
+  const onHandler = (key) => {
     switch (key) {
       case "shop":
         setData(getSaleProducts(products));
+        setStyle_nabshop("common")
+        setStyle("lie")
+        setStyle_nabcontact("lie")
         setFlag(0);
         break;
       case "about":
         setData(getFeaturedProducts(products));
+        setStyle("common");
+        setStyle_nabshop("lie")
+        setStyle_nabcontact("lie")
         setFlag(1);
         break;
-      case "contact":
+      default:
         setData(getTendingProducts(products));
+        setStyle_nabcontact("common")
+        setStyle("lie");
+        setStyle_nabshop("lie")
         setFlag(2);
         break;
-      default:
-        setData(products);
     }
   };
 
@@ -76,17 +89,17 @@ const ProductsTab = ({ products, limit = 8, className }) => {
               align="center"
               style={{ marginBottom: 0 }}
             >
-              <TabList>
-                {productNav.map((item) => (
-                  <Tab
-                    key={item?.key}
-                    data-key={item?.key}
-                    onClick={(event) => onHandler(event)}
-                  >
-                    {item?.title}
-                  </Tab>
-                ))}
-              </TabList>
+              <ul>
+                <li className={nab_shop}>
+                  <div onClick={() => onHandler('shop')}>SHOP</div>
+                </li>
+                <li className={nab_about}>
+                  <div onClick={() => onHandler('about')}>ABOUT US</div>
+                </li>
+                <li className={nab_contact}>
+                  <div onClick={() => onHandler('contact')}>CONTACT</div>
+                </li>
+              </ul>
             </ProductNav>
             <hr style={{ width: "80%" }}></hr>
           </Tabs>
@@ -96,7 +109,7 @@ const ProductsTab = ({ products, limit = 8, className }) => {
           <Col md={1} lg={1}></Col>
           <Col md={10} lg={10}>
             {flag == 0 ? (
-              <div>hi</div>
+              <SigninForm />
             ) : flag == 1 ? (
               <div style={{ marginTop: "48px" }}>
                 <Row>
