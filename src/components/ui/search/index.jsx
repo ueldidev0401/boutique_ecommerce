@@ -9,13 +9,17 @@ import scrollTop from "../../../assets/image/header/scrollTop.png";
 
 import { OffCanvasCloseBtn } from "@components/ui/offCanvas/style";
 
+import { useSelector, useDispatch } from "react-redux";
+import { changeIsShowSearchModelAction } from "@global/actions/cardActions";
 const SearchForm = ({ isShow, onHandler }) => {
+  var dispatch = useDispatch();
+  var cardData = useSelector(state => state.cardReducer);
   const router = useRouter();
   const [searchParam, setSearchParam] = useState("");
   const [showSearchBox, setShowSearchBox] = useState(false);
 
   const onSearchFormHandler = (event) => {
-    // event.preventDefault();
+    event.preventDefault();
     // onHandler();
     // router.push(`/search/${searchParam}`);
     console.log("here");
@@ -25,45 +29,39 @@ const SearchForm = ({ isShow, onHandler }) => {
   };
 
   return (
-    <SearchBoxWrap show={isShow}>
-      <SearchBox>
-        <div className="form-wrap">
-          <Form onSubmit={onSearchFormHandler}>
-            {/* <Input
-                            type="search"
-                            name="search"
-                            className="furns-form-control"
-                            placeholder="Enter your search keyword..."
-                            onChange={onChangeHandler}
-                        /> */}
-            <input type="text" placeholder="Search" className="searchInput" />
-            <select id="selectoption" className="selectoption">
-              <option value="volvo">All Categories</option>
-              <option value="saab">Saab</option>
-              <option value="opel">Opel</option>
-              <option value="audi">Audi</option>
-            </select>
-            <SearchButton type="submit" onClick={onSearchFormHandler}>
-              <IoSearchOutline />
-            </SearchButton>
-            <div
-          className="close_search"
-          onClick={() => setShowSearchBox(!showSearchBox)}
-        >
-          <div>
-            <img
-              style={{
-                marginLeft: "auto",
-                marginRight: "auto",
-                display: "block"
-              }}
-              src={scrollTop.src}
-            />
+    <SearchBoxWrap show={cardData.isShowSearchModel}>
+      <SearchBox style={{position: 'fixed', maxWidth: '1440px'}}>
+          <div className="form-wrap">
+            <Form onSubmit={onSearchFormHandler}>
+              <input type="text" placeholder="Search" className="searchInput" />
+              <select id="selectoption" className="selectoption">
+                <option value="volvo">All Categories</option>
+                <option value="saab">Saab</option>
+                <option value="opel">Opel</option>
+                <option value="audi">Audi</option>
+              </select>
+              <SearchButton type="submit" onClick={onSearchFormHandler}>
+                <IoSearchOutline />
+              </SearchButton>
+              <div
+                className="close_search"
+                onClick={() => dispatch(changeIsShowSearchModelAction(false))}
+              >
+                <div>
+                  <img
+                    style={{
+                      marginLeft: "auto",
+                      marginRight: "auto",
+                      display: "block"
+                    }}
+                    src={scrollTop.src}
+                  />
+                </div>
+                <div style={{ textAlign: "center", paddingTop: "10px" }}>close</div>
+              </div>
+            </Form>
           </div>
-          <div style={{ textAlign: "center", paddingTop: "10px" }}>close</div>
-        </div>
-          </Form>
-        </div>
+
       </SearchBox>
       <div className="overlay" onClick={() => onHandler()} />
     </SearchBoxWrap>

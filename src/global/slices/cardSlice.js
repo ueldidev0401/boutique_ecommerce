@@ -5,6 +5,7 @@ export const cardSlice = createSlice({
     initialState: {
         isGridView: false,
         isModalShow: false,
+        isShowSearchModel: false,
         carrentCategory: 0,
     },
     reducers: {
@@ -26,10 +27,16 @@ export const cardSlice = createSlice({
                 ...state,
                 currentCategory: action.payload
             }
+        },
+        changeIsShowSearchModel: (state, action) => {
+            return {
+                ...state,
+                isShowSearchModel: action.payload
+            }
         }
     }
 })
 
 const {reducer, actions} = cardSlice;
-export const { changeView, changeIsModalShow, setCurrentCategory} = actions;
+export const { changeView, changeIsModalShow, setCurrentCategory, changeIsShowSearchModel} = actions;
 export default reducer;

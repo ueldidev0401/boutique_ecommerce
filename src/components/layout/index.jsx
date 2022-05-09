@@ -9,6 +9,9 @@ import MiniCartSidebar from "@components/cart/minicart-sidebar";
 import SettingsSidebar from "@components/layout/settings";
 import MobileFooter from "@components/layout/mobile-footer";
 import MobileNavbar from "@components/layout/navbar/mobile-nav";
+import {useSelector, useDispatch} from "react-redux";
+
+import { changeIsShowSearchModelAction } from "@global/actions/cardActions";
 
 const Layout = ({children, bg, ...props}) => {
     const router = useRouter();
@@ -16,6 +19,8 @@ const Layout = ({children, bg, ...props}) => {
     const [isShowMiniCart, setShowMiniCart] = useState(false);
     const [isShowSearchBox, setIsShowSearchBox] = useState(false);
     const [isShowMobileNav, setIsShowMobileNav] = useState(false);
+    var dispatch = useDispatch();
+    var cardData = useSelector(state => state.cardReducer);
 
     const onMiniCartHandler = () => {
         document.querySelector('body').classList.toggle('overflow');
@@ -23,7 +28,8 @@ const Layout = ({children, bg, ...props}) => {
     };
 
     const onSearchBoxHandler = () => {
-        document.querySelector('body').classList.toggle('overflow');
+        // document.querySelector('body').classList.toggle('overflow');
+        dispatch(changeIsShowSearchModelAction(!cardData.isShowSearchModel));
         setIsShowSearchBox(prevState => !prevState)
     }
 
@@ -68,7 +74,7 @@ const Layout = ({children, bg, ...props}) => {
             />
 
             <SearchForm
-                isShow={isShowSearchBox}
+                isShow={cardData.isShowSearchModel}
                 onHandler={onSearchBoxHandler}
             />
 

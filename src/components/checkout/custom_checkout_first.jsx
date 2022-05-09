@@ -33,7 +33,7 @@ import phone from "../../assets/image/body/section1/phone.png"
 import { useRouter } from "next/router";
 const step1Content = <h1>ssss</h1>;
 const step2Content = <h1></h1>;
-const CustomCheckOut = () => {
+const CustomCheckOutFirst = () => {
   var router = useRouter();
   // setup step validators, will be called before proceeding to the next step
   function step2Validator() {
@@ -283,8 +283,27 @@ const CustomCheckOut = () => {
                       }}
                     />
                   </Col>
-
                   <Col md={12}>
+                    <OrderTypeText>Full Name</OrderTypeText>
+                    <InputCoupoun style={{ width: "100%" }}></InputCoupoun>
+                  </Col>
+                  <Col md={6}>
+                    <OrderTypeText>Phone Number</OrderTypeText>
+                    <InputCoupoun style={{ width: "100%" }}></InputCoupoun>
+                  </Col>
+                  <Col md={6}>
+                    <OrderTypeText>Email</OrderTypeText>
+                    <InputCoupoun style={{ width: "100%" }}></InputCoupoun>
+                  </Col>
+                  <Col md={12}>
+                    <OrderTypeText>Delivery Address</OrderTypeText>
+                    <InputCoupoun style={{ width: "100%" }}></InputCoupoun>
+                  </Col>
+                  <Col md={12}>
+                    <img src={map.src}></img>
+                  </Col>
+
+                  {/* <Col md={12}>
                     <img
                       src={emoji.src}
                       style={{
@@ -322,7 +341,7 @@ const CustomCheckOut = () => {
                     <Col md={12}>
                       <CustomButtonGreen onClick={() => {router.push('/whatsapp')}}><img src={phone.src}></img>{" "}<CenterText style={{ color: "white" }}>  Order On Whatsapp</CenterText></CustomButtonGreen>
                     </Col>
-                  </Col>
+                  </Col> */}
                 </Row>
               </Col>
             </Row>
@@ -334,4 +353,4 @@ const CustomCheckOut = () => {
   );
 };
 
-export default CustomCheckOut;
+export default CustomCheckOutFirst;

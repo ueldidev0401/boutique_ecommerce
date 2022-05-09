@@ -24,6 +24,8 @@ import {
 import logo from '@assets/image/header/logo.svg';
 import bucket from '@assets/image/header/bucket.svg';
 import {VscMenu} from 'react-icons/vsc'
+import {useRouter} from "next/router";
+
 const HeaderBottom = ({
   onConfigHandler,
   onMiniCartHandler,
@@ -31,6 +33,8 @@ const HeaderBottom = ({
   onMobileNavHandler,
 }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const router = useRouter();
+
   const shoppingCart = useSelector((state) => state.shoppingCart);
   const cartQuantity = getCartProductsQuantity(shoppingCart);
   const isLoggedIn = useIsLoggedIn();
@@ -149,13 +153,13 @@ const HeaderBottom = ({
           <p className="customHeaderHelpLineText">Help Line</p>
           <p className="customHeaderHelpLineNumber">1-800-700-600</p>
         </div>
-        <div className="customeHeaderLogo">
-          <img src={logo.src} style={{ width: '100%', height: '100%' }} />
+        <div className="customeHeaderLogo" >
+          <img src={logo.src} style={{ width: '100%', height: '100%' }} onClick={() => {router.push('/')}} />
         </div>
         <div className="customHeaderSearch">
-          <IoSearchOutline onClick={() => onSearchBoxHandler()} style={{ width: '100%', height: '100%' }} />
+          <IoSearchOutline onClick={() => onSearchBoxHandler()} class="customHeaderSearchIcon" style={{ width: '100%', height: '100%' }} />
         </div>
-        <div className="customHeaderCart">
+        <div className="customHeaderCart" onClick={() => {router.push('/checkout')}}>
           <img src={cart.src} style={{ width: '100%', height: '100%' }} />
         </div>
         <CartItemCount className="customHeaderBadge">{4}</CartItemCount>

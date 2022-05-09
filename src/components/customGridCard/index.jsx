@@ -9,13 +9,18 @@ import { getDiscountPercentage } from "@utils/product";
 import { Col, Container, Row } from "@bootstrap";
 import { HiOutlinePlus } from 'react-icons/hi';
 import Vector from '@assets/image/body/section2/Vector.png';
+import { useDispatch, useSelector } from "react-redux";
+import { changeIsModalShowAction } from "@global/actions/cardActions";
+
 // import { CustomCard } from "./customCard.style";
 const CustomGridCard = ({ stuff, style, onCardClickHandle }) => {
     let { photoUrl, brief, price, oldPrice, title, size } = stuff;
-
+    const dispatch = useDispatch();
     return (
         <Fragment>
-            <Container className="card" style={{ border: '1px solid #E8E8E8', padding: '0', borderRadius: '2%', fontFamily: 'Saira', height: '100%' }}>
+            <Container className="card" style={{ border: '1px solid #E8E8E8', padding: '0', borderRadius: '2%', fontFamily: 'Saira', height: '100%' }} onClick={() => {
+                dispatch(changeIsModalShowAction(true));
+            }}>
                 <div className="gridCard">
                     <div className="gridCardImage">
                         <img src={photoUrl} style={{width: '100%', height: '100%'}}/>

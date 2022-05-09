@@ -42,7 +42,7 @@ const Home = ({ blogs, products, collections }) => {
                 TOP
             </div>
 
-            <Row style={{ margin: 0 }}>
+            <Row style={{ margin: 0}}>
                 <Col lg={12} xs={12} style={{ padding: 0 }}>
                     <img src={slideImage.src} style={{ width: '100%', height: '100%' }} />
                 </Col>

@@ -14,9 +14,18 @@ export const GlobalStyle = createGlobalStyle`
     height: 100%;
     overflow-x: hidden;
   }
-
+  main {
+    padding-top: 111px;
+  }
   header {
-    height: 111px
+    position: fixed;
+    z-index: 111;
+    max-width: 1440px;
+    width: 100%;
+    background-color: white;
+    height: 111px;
+    width: 100%;
+    box-shadow: 0px 2px 30px 1px rgba(0, 0, 0, 0.14);
   }
 
   body {
@@ -64,6 +73,9 @@ export const GlobalStyle = createGlobalStyle`
   @media screen and (max-width: 407px) {
     header {
       height: 40.07px
+    }
+    main {
+      padding-top: 40.07px
     }
   }
 

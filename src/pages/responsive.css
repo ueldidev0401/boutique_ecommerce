@@ -198,6 +198,7 @@ footer {
 
 .customeHeaderLogo {
     position: absolute;
+    cursor: pointer;
     width: 21.8%;
     height: 100px;
     left: 38.2%;
@@ -219,6 +220,7 @@ footer {
     width: 2.5%;
     height: 30px;
     left: 91.32%;
+    cursor: pointer;
     /* right: 8.3%; */
     top: 47px;
     /* bottom: 97.7%; */
@@ -497,10 +499,11 @@ footer {
 }
 
 .customModalFooter {
-    position: relative;
+    position: absolute;
     width: 100%;
     height: 119.57px;
     display: flex;
+    bottom: 10px;
 }
 
 .customModalFooterPlus {
@@ -576,6 +579,7 @@ footer {
 
     .customeHeaderLogo {
         position: absolute;
+        cursor: pointer;
         width: 23.91%;
         height: 31px;
         left: 0px;
@@ -594,6 +598,7 @@ footer {
         display: flex;
         position: absolute;
         left: 80.34%;
+        cursor: pointer;
         /* right: 15.72%; */
         top: 12px !important;
     }
@@ -677,3 +682,6 @@ footer {
     color: #655454;
 }
 
+.customHeaderSearchIcon {
+    cursor: pointer;
+}

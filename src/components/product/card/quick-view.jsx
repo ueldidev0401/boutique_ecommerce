@@ -167,7 +167,8 @@ const QuickView = ({ product, isOpen, onHandler }) => {
                 <p className="customModalFooterPrice">$12.50</p>
 
                 <div className="customModalFooterButton">
-                    <Button color="#E84242"><p className="customModalFooterButtonTitle">Add to Cart</p></Button>
+                    {/* <Button color="#E84242"><p className="customModalFooterButtonTitle">Add to Cart</p></Button> */}
+                    <a class="btn btn-primary customModalFooterButtonTitle">Add to Cart</a>
                 </div>
 
                 <div style={{ 

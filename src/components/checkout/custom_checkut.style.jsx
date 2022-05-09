@@ -2,6 +2,9 @@ import styled, { devices, space, themeGet } from "@styled";
 
 export const FormCheckout = styled.div`
   ${space}
+  {
+    height: 1124px;
+  }
   option {
     font-weight: 300;
     font-size: 12px;
