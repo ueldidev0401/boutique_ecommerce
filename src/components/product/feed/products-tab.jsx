@@ -8,6 +8,8 @@ import SectionTitle from "@components/ui/section-title";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import { Col, Container, Row } from "@bootstrap-styled/v4";
 import SigninForm from "@components/auth/signin-form";
+import CheckoutForm from "@components/checkout/custom_checkout";
+
 
 import {
   ProductNav,
@@ -35,16 +37,17 @@ import Promotions from "@components/promotions";
 import Categories from "@components/categories";
 import sliderData from "@data/slider/home-1.json";
 import { SliderOne as Slider } from "@components/slider";
-import slideImage from '@assets/image/body/section1/landing_image.png';
-import saleImage1 from '@assets/image/body/section1/sale_image1.png';
-import saleImage2 from '@assets/image/body/section1/sale_image2.png';
-import thirdImage from '@assets/image/body/section1/third_image.png';
-import nikeImage from '@assets/image/body/section2/nike_img.png';
+import slideImage from "@assets/image/body/section1/landing_image.png";
+import saleImage1 from "@assets/image/body/section1/sale_image1.png";
+import saleImage2 from "@assets/image/body/section1/sale_image2.png";
+import thirdImage from "@assets/image/body/section1/third_image.png";
+import nikeImage from "@assets/image/body/section2/nike_img.png";
 // import {client, blogsQuery, productsQuery, collectionsQuery} from "@graphql";
-import CustomCard from '../../customCard/index';
+import CustomCard from "../../customCard/index";
 import CustomCategories from "@components/customcategories";
 import FilterBy from "@components/filterBy";
-import { BsChevronUp } from 'react-icons/bs';
+import { BsChevronUp } from "react-icons/bs";
+import { LoginFormWrap } from "@components/auth/auth.style";
 const productNav = [
   {
     key: "shop",
@@ -74,23 +77,23 @@ const ProductsTab = ({ products, limit = 8, className }) => {
     switch (key) {
       case "shop":
         setData(getSaleProducts(products));
-        setStyle_nabshop("common")
-        setStyle("lie")
-        setStyle_nabcontact("lie")
+        setStyle_nabshop("common");
+        setStyle("lie");
+        setStyle_nabcontact("lie");
         setFlag(0);
         break;
       case "about":
         setData(getFeaturedProducts(products));
         setStyle("common");
-        setStyle_nabshop("lie")
-        setStyle_nabcontact("lie")
+        setStyle_nabshop("lie");
+        setStyle_nabcontact("lie");
         setFlag(1);
         break;
       default:
         setData(getTendingProducts(products));
-        setStyle_nabcontact("common")
+        setStyle_nabcontact("common");
         setStyle("lie");
-        setStyle_nabshop("lie")
+        setStyle_nabshop("lie");
         setFlag(2);
         break;
     }
@@ -109,13 +112,13 @@ const ProductsTab = ({ products, limit = 8, className }) => {
             >
               <ul>
                 <li className={nab_shop}>
-                  <div onClick={() => onHandler('shop')}>SHOP</div>
+                  <div onClick={() => onHandler("shop")}>SHOP</div>
                 </li>
                 <li className={nab_about}>
-                  <div onClick={() => onHandler('about')}>ABOUT US</div>
+                  <div onClick={() => onHandler("about")}>ABOUT US</div>
                 </li>
                 <li className={nab_contact}>
-                  <div onClick={() => onHandler('contact')}>CONTACT</div>
+                  <div onClick={() => onHandler("contact")}>CONTACT</div>
                 </li>
               </ul>
             </ProductNav>
@@ -126,32 +129,100 @@ const ProductsTab = ({ products, limit = 8, className }) => {
         <Row>
           {flag == 0 ? (
             <Col>
-              <div style={{ marginTop: '48px' }}>
+              <div style={{ marginTop: "48px" }}>
                 <>
                   <CustomCategories />
-                  <Row style={{ paddingLeft: '9%', paddingRight: '9%', marginBottom: '53px', width: '100%', marginRight: 0 }}>
+                  <Row
+                    style={{
+                      paddingLeft: "9%",
+                      paddingRight: "9%",
+                      marginBottom: "53px",
+                      width: "100%",
+                      marginRight: 0,
+                    }}
+                  >
                     <FilterBy />
                   </Row>
 
-                  <Row style={{ paddingLeft: '9%', paddingRight: '9%', marginBottom: '53px', width: '100%', marginRight: 0 }}>
-                    <Col sm={3} style={{ display: 'flex', justifyContent: 'center' }} >
-                      <div style={{ width: '267px', height: '409px' }}>
-                        <CustomCard stuff={{ photoUrl: nikeImage.src, title: 'NIKE', brief: 'Sportsware smooth men\'s Semi-Brushed Back Fleece Sweater', size: 'S, M, L, XL, 2XL', price: '$33', oldPrice: '$44' }} />
+                  <Row
+                    style={{
+                      paddingLeft: "9%",
+                      paddingRight: "9%",
+                      marginBottom: "53px",
+                      width: "100%",
+                      marginRight: 0,
+                    }}
+                  >
+                    <Col
+                      sm={3}
+                      style={{ display: "flex", justifyContent: "center" }}
+                    >
+                      <div style={{ width: "267px", height: "409px" }}>
+                        <CustomCard
+                          stuff={{
+                            photoUrl: nikeImage.src,
+                            title: "NIKE",
+                            brief:
+                              "Sportsware smooth men's Semi-Brushed Back Fleece Sweater",
+                            size: "S, M, L, XL, 2XL",
+                            price: "$33",
+                            oldPrice: "$44",
+                          }}
+                        />
                       </div>
                     </Col>
-                    <Col sm={3} style={{ display: 'flex', justifyContent: 'center' }} >
-                      <div style={{ width: '267px', height: '409px' }}>
-                        <CustomCard stuff={{ photoUrl: nikeImage.src, title: 'NIKE', brief: 'Sportsware smooth men\'s Semi-Brushed Back Fleece Sweater', size: 'S, M, L, XL, 2XL', price: '$33', oldPrice: '$44' }} />
+                    <Col
+                      sm={3}
+                      style={{ display: "flex", justifyContent: "center" }}
+                    >
+                      <div style={{ width: "267px", height: "409px" }}>
+                        <CustomCard
+                          stuff={{
+                            photoUrl: nikeImage.src,
+                            title: "NIKE",
+                            brief:
+                              "Sportsware smooth men's Semi-Brushed Back Fleece Sweater",
+                            size: "S, M, L, XL, 2XL",
+                            price: "$33",
+                            oldPrice: "$44",
+                          }}
+                        />
                       </div>
                     </Col>
-                    <Col sm={3} style={{ display: 'flex', justifyContent: 'center' }} >
-                      <div style={{ width: '267px', height: '409px' }}>
-                        <CustomCard stuff={{ photoUrl: nikeImage.src, title: 'NIKE', brief: 'Sportsware smooth men\'s Semi-Brushed Back Fleece Sweater', size: 'S, M, L, XL, 2XL', price: '$33', oldPrice: '$44' }} />
+                    <Col
+                      sm={3}
+                      style={{ display: "flex", justifyContent: "center" }}
+                    >
+                      <div style={{ width: "267px", height: "409px" }}>
+                        <CustomCard
+                          stuff={{
+                            photoUrl: nikeImage.src,
+                            title: "NIKE",
+                            brief:
+                              "Sportsware smooth men's Semi-Brushed Back Fleece Sweater",
+                            size: "S, M, L, XL, 2XL",
+                            price: "$33",
+                            oldPrice: "$44",
+                          }}
+                        />
                       </div>
                     </Col>
-                    <Col sm={3} style={{ display: 'flex', justifyContent: 'center' }} >
-                      <div style={{ width: '267px', height: '409px' }}>
-                        <CustomCard stuff={{ photoUrl: nikeImage.src, title: 'NIKE', brief: 'Sportsware smooth men\'s Semi-Brushed Back Fleece Sweater', size: 'S, M, L, XL, 2XL', price: '$33', oldPrice: '$44' }} />
+                    <Col
+                      sm={3}
+                      style={{ display: "flex", justifyContent: "center" }}
+                    >
+                      <div style={{ width: "267px", height: "409px" }}>
+                        <CustomCard
+                          stuff={{
+                            photoUrl: nikeImage.src,
+                            title: "NIKE",
+                            brief:
+                              "Sportsware smooth men's Semi-Brushed Back Fleece Sweater",
+                            size: "S, M, L, XL, 2XL",
+                            price: "$33",
+                            oldPrice: "$44",
+                          }}
+                        />
                       </div>
                     </Col>
                   </Row>
@@ -170,46 +241,47 @@ const ProductsTab = ({ products, limit = 8, className }) => {
                           Who we are?
                         </LargeFontWeight>
                         <CommonFontWeight style={{ fontSize: "22px" }}>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                          Maecenas finibus mi nec orci luctus, eu congue neque
-                          venenatis. Nunc tincidunt viverra mi elementum eleifend.
-                          Nunc fringilla felis lectus. Nunc feugiat ipsum id
-                          vestibulum rhoncus. Pellentesque at elementum lectus.
-                          Donec pulvinar justo non mi vehicula hendrerit.
-                          Phasellus blandit nunc vel felis cursus fermentum. Donec
-                          mattis sollicitudin commodo. Sed tellus leo, dignissim a
-                          diam et, fringilla tincidunt mauris. Vivamus quam
-                          tellus, maximus sit amet enim sed, porttitor bibendum
-                          lorem. Phasellus faucibus quam sit amet massa tincidunt
-                          faucibus.
+                          Lorem ipsum dolor sit amet, consectetur adipiscing
+                          elit. Maecenas finibus mi nec orci luctus, eu congue
+                          neque venenatis. Nunc tincidunt viverra mi elementum
+                          eleifend. Nunc fringilla felis lectus. Nunc feugiat
+                          ipsum id vestibulum rhoncus. Pellentesque at elementum
+                          lectus. Donec pulvinar justo non mi vehicula
+                          hendrerit. Phasellus blandit nunc vel felis cursus
+                          fermentum. Donec mattis sollicitudin commodo. Sed
+                          tellus leo, dignissim a diam et, fringilla tincidunt
+                          mauris. Vivamus quam tellus, maximus sit amet enim
+                          sed, porttitor bibendum lorem. Phasellus faucibus quam
+                          sit amet massa tincidunt faucibus.
                         </CommonFontWeight>
                         <br></br>
                         <CommonFontWeight style={{ fontSize: "22px" }}>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                          Maecenas finibus mi nec orci luctus, eu congue neque
-                          venenatis. Nunc tincidunt viverra mi elementum eleifend.
-                          Nunc fringilla felis lectus. Nunc feugiat ipsum id
-                          vestibulum rhoncus. Pellentesque at elementum lectus.
-                          Donec pulvinar justo non mi vehicula hendrerit.
-                          Phasellus blandit nunc vel felis cursus fermentum.
+                          Lorem ipsum dolor sit amet, consectetur adipiscing
+                          elit. Maecenas finibus mi nec orci luctus, eu congue
+                          neque venenatis. Nunc tincidunt viverra mi elementum
+                          eleifend. Nunc fringilla felis lectus. Nunc feugiat
+                          ipsum id vestibulum rhoncus. Pellentesque at elementum
+                          lectus. Donec pulvinar justo non mi vehicula
+                          hendrerit. Phasellus blandit nunc vel felis cursus
+                          fermentum.
                         </CommonFontWeight>
                         <br></br>
                         <LargeFontWeight style={{ fontSize: "40px" }}>
                           What We do ?
                         </LargeFontWeight>
                         <CommonFontWeight style={{ fontSize: "22px" }}>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                          Maecenas finibus mi nec orci luctus, eu congue neque
-                          venenatis. Nunc tincidunt viverra mi elementum eleifend.
-                          Nunc fringilla felis lectus. Nunc feugiat ipsum id
-                          vestibulum rhoncus. Pellentesque at elementum lectus.
-                          Donec pulvinar justo non mi vehicula hendrerit.
-                          Phasellus blandit nunc vel felis cursus fermentum. Donec
-                          mattis sollicitudin commodo. Sed tellus leo, dignissim a
-                          diam et, fringilla tincidunt mauris. Vivamus quam
-                          tellus, maximus sit amet enim sed, porttitor bibendum
-                          lorem. Phasellus faucibus quam sit amet massa tincidunt
-                          faucibus.
+                          Lorem ipsum dolor sit amet, consectetur adipiscing
+                          elit. Maecenas finibus mi nec orci luctus, eu congue
+                          neque venenatis. Nunc tincidunt viverra mi elementum
+                          eleifend. Nunc fringilla felis lectus. Nunc feugiat
+                          ipsum id vestibulum rhoncus. Pellentesque at elementum
+                          lectus. Donec pulvinar justo non mi vehicula
+                          hendrerit. Phasellus blandit nunc vel felis cursus
+                          fermentum. Donec mattis sollicitudin commodo. Sed
+                          tellus leo, dignissim a diam et, fringilla tincidunt
+                          mauris. Vivamus quam tellus, maximus sit amet enim
+                          sed, porttitor bibendum lorem. Phasellus faucibus quam
+                          sit amet massa tincidunt faucibus.
                         </CommonFontWeight>
                         <br></br>
                       </div>
@@ -222,6 +294,12 @@ const ProductsTab = ({ products, limit = 8, className }) => {
             <>
               <Col md={1} lg={1}></Col>
               <Col md={10} lg={10}>
+                <div>
+                  {/* <CheckoutForm /> */}
+                </div>
+                <div>
+                  <SigninForm />
+                </div>
                 <div style={{ marginTop: "48px" }}>
                   <Row>
                     <Col md={5} sm={5}>
@@ -322,7 +400,10 @@ const ProductsTab = ({ products, limit = 8, className }) => {
                         type="text"
                         placeholder="Last Name"
                       ></CustomInput>
-                      <CustomInput type="text" placeholder="Email"></CustomInput>
+                      <CustomInput
+                        type="text"
+                        placeholder="Email"
+                      ></CustomInput>
                       <CommonFontWeight>Message</CommonFontWeight>
                       <TextAreaCustom></TextAreaCustom>
                       <CustomButton>Send</CustomButton>
@@ -334,7 +415,7 @@ const ProductsTab = ({ products, limit = 8, className }) => {
           )}
         </Row>
       </Container>
-    </div >
+    </div>
   );
 };
 
