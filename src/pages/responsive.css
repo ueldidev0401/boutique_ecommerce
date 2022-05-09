@@ -36,6 +36,10 @@ footer {
     height: 100%;
 }
 
+.custom-categories-button :hover {
+    background-color: #918c8c;
+}
+
 .card {
     font-weight: 400;
     border: 0;
@@ -581,9 +585,11 @@ footer {
     .react-tabs {
         display: none;
     }
+
     .filterby {
         display: none !important;
     }
+
     .customHeaderCartForMobile {
         display: flex;
         position: absolute;
@@ -629,4 +635,11 @@ footer {
     .custom-categories-button {
         display: none;
     }
+}
+
+.customBottomMark {
+    position: absolute;
+    width: 2.8%;
+    height: 52px;
+    left: 5.7%;
 }

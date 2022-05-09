@@ -27,7 +27,7 @@ export const CopyrightText = styled.p`
 `
 
 export const FooterBottomWrapper = styled.div`
-  background-color: white
+  background-color: green
   ${color}
   ${space}
 `

@@ -12,8 +12,8 @@ const FooterBottom = ({ bg }) => {
             pt={[15, null, null, 25]}
             pb={[10, null, null, 20]}
         >
-            <Container style={{ marginLeft: '5.77%', marginRight: '5.77%'}}>
-                <Row className="flex-sm-row-reverse">
+            <Container fluid style={{ backgroundColor: 'green'}}>
+                {/* <Row className="flex-sm-row-reverse">
                     <Col md={3} className="text-center text-md-right" style={{ display: 'flex', flexDirection: 'row-reverse' }}>
                         <img src={replaceImg.src} style={{ margin: '1rem' }} />
                         <img src={translateImg.src} style={{ margin: '1rem' }} />
@@ -33,7 +33,10 @@ const FooterBottom = ({ bg }) => {
                     <Col md={3} className="text-center text-md-left">
                         <img src={mark.src} />
                     </Col>
-                </Row>
+                </Row> */}
+                <div className="customBottomMark">
+                    <img src={mark.src} style={{width: '100%', height: '100%'}}/>
+                </div>
             </Container>
         </FooterBottomWrapper >
     );

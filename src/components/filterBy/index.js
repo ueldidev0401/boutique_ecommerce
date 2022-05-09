@@ -24,11 +24,11 @@ const FilterBy = ({ stuff, style }) => {
             <Container>
                 <Row>
                     <Col style={{ flexDirection: "row-reverse", display: "flex", }} md={12}>
-                        <HiViewGrid fontSize='50px' cursor={'pointer'} color={isGridViewActive ? "#FF0101" : "#D2D2D2"} onClick={() => {
+                        <HiViewGrid fontSize='35px' cursor={'pointer'}  color={isGridViewActive ? "#FF0101" : "#D2D2D2"} onClick={() => {
                             setIsGridViewActive(true);
                             dispatch(changeViewAction(true));
                         }} />
-                        <MdFilterList fontSize={'50px'} cursor={'pointer'} color={!isGridViewActive ? "#FFCB65" : "#D2D2D2"} onClick={() => {
+                        <MdFilterList fontSize={'35px'} cursor={'pointer'} style={{marginRight: '1.8%'}} color={!isGridViewActive ? "#FFCB65" : "#D2D2D2"} onClick={() => {
                             setIsGridViewActive(false);
                             dispatch(changeViewAction(false));
                         }} />

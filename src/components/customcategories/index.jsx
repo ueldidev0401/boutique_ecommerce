@@ -95,14 +95,14 @@ const responsive = {
 // }
 
 const CustomCategories = () => {
-    
+    var dispatch = useDispatch();
     return (
         <Fragment>
             <Row>
                 <Col md={12}>
                     <div className="custom-categories">
                         <div className="custom-categories-button">
-                            <div>ALL CATEGORIES</div>
+                            <div onClick={() => {dispatch(setCurrentCategory(0))}}>ALL CATEGORIES</div>
                         </div>
                         <div className="custom-categories-detail">
                             <Carousel
