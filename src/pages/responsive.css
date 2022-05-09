@@ -29,6 +29,7 @@ footer {
     justify-content: center;
     align-items: center;
     text-align: center;
+    cursor: pointer;
 }
 
 .custom-categories-detail {
@@ -568,7 +569,6 @@ footer {
 
     color: #FFFFFF;
 }
-
 @media screen and (max-width: 407px) {
     .customHeaderHelpLine {
         display: none;
@@ -642,4 +642,38 @@ footer {
     width: 2.8%;
     height: 52px;
     left: 5.7%;
+    bottom: 10px;
 }
+.customBottomTrack {
+    position: absolute;
+    width: 1.87%;
+    height: 27px;
+    left: 92.7%;
+    bottom: 26px;
+}
+.customBottomCopyright {
+    position: absolute;
+    width: 29.3%;
+    height: 16px;
+    left: 35.3%;
+    bottom: 39px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 29px;
+    text-align: center;
+
+    color: #000000;
+}
+
+.customBottomTranslator {
+    position: absolute;
+    width: 1.9%;
+    height: 25.71px;
+    left: 89.03%;
+    bottom: 24.41px;
+
+    color: #655454;
+}
+

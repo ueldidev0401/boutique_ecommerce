@@ -26,27 +26,43 @@ const Home = ({ blogs, products, collections }) => {
                 <title>{settings?.title}</title>
                 <meta name="description" content={settings?.description} />
             </Head>
-                <Row style={{ margin: 0 }}>
-                    <Col lg={12} xs={12} style={{ padding: 0 }}>
-                        <img src={slideImage.src} style={{ width: '100%', height: '100%' }} />
-                    </Col>
-                </Row>
-                <Row style={{ marginTop: '1%', marginRight: '0', marginLeft: '0' }}>
-                    <Col lg={6} xs={6} style={{ paddingLeft: '1%', paddingRight: '0.5%' }}>
-                        <img src={saleImage1.src} style={{ width: '100%', height: '100%' }} />
-                    </Col>
-                    <Col lg={6} xs={6} style={{ paddingLeft: '0.5%', paddingRight: '1%' }}>
-                        <img src={saleImage2.src} style={{ width: '100%', height: '100%' }} />
-                    </Col>
-                </Row>
-                <Row style={{ marginTop: '1%', marginRight: '0', marginLeft: '0' }}>
-                    <Col lg={12} xs={12} style={{ paddingLeft: '0.5%', paddingRight: '1%' }}>
-                        <img src={thirdImage.src} style={{ width: '100%', height: '100%' }} />
-                    </Col>
-                </Row>
-                <ProductsTab products={products} limit={8} />
+            <div style={{
+                position: 'fixed', bottom: 144, right: "4.6%", fontFamily: 'Saira',
+                fontStyle: 'normal',
+                fontWeight: 300,
+                fontSize: '18px',
+                lineHeight: '28px',
+                textAlign: 'center',
+                display: 'flex',
+                flexDirection: 'column',
+                zIndex:1,
+                cursor: 'pointer',
+            }} >
+                <BsChevronUp fontSize={'40px'} color='#9D9999' />
+                TOP
+            </div>
 
-                {/* <Slider animate={true} data={sliderData}/>
+            <Row style={{ margin: 0 }}>
+                <Col lg={12} xs={12} style={{ padding: 0 }}>
+                    <img src={slideImage.src} style={{ width: '100%', height: '100%' }} />
+                </Col>
+            </Row>
+            <Row style={{ marginTop: '1%', marginRight: '0', marginLeft: '0' }}>
+                <Col lg={6} xs={6} style={{ paddingLeft: '1%', paddingRight: '0.5%' }}>
+                    <img src={saleImage1.src} style={{ width: '100%', height: '100%' }} />
+                </Col>
+                <Col lg={6} xs={6} style={{ paddingLeft: '0.5%', paddingRight: '1%' }}>
+                    <img src={saleImage2.src} style={{ width: '100%', height: '100%' }} />
+                </Col>
+            </Row>
+            <Row style={{ marginTop: '1%', marginRight: '0', marginLeft: '0' }}>
+                <Col lg={12} xs={12} style={{ paddingLeft: '0.5%', paddingRight: '1%' }}>
+                    <img src={thirdImage.src} style={{ width: '100%', height: '100%' }} />
+                </Col>
+            </Row>
+            <ProductsTab products={products} limit={8} />
+
+            {/* <Slider animate={true} data={sliderData}/>
  size
             <Categories categories={collections}/>
 
@@ -55,44 +71,27 @@ const Home = ({ blogs, products, collections }) => {
             <Promotions/>
 
             <LatestBlog posts={blogs} pt={[60, 60, 100]}/> */}
-      <div
-        style={{
-          position: "fixed",
-          bottom: 144,
-          right: 67,
-          fontFamily: "Saira",
-          fontStyle: "normal",
-          fontWeight: 300,
-          fontSize: "18px",
-          lineHeight: "28px",
-          textAlign: "center",
-          display: "flex",
-          flexDirection: "column",
-        }}
-      >
-        <BsChevronUp fontSize={"40px"} color="#9D9999" />
-        TOP
-      </div>
-    </Layout>
-  );
+
+        </Layout>
+    );
 };
 
 export const getStaticProps = async () => {
-  // const blogsData = await client(blogsQuery(4)),
-  // blogs = blogsData?.blogs?.edges[0]?.node?.articles?.edges,
-  // productsData = await client(productsQuery(50)),
-  // products = productsData?.products?.edges,
-  // collectionsData = await client(collectionsQuery(5)),
-  // collections = collectionsData?.collections?.edges;
+    // const blogsData = await client(blogsQuery(4)),
+    // blogs = blogsData?.blogs?.edges[0]?.node?.articles?.edges,
+    // productsData = await client(productsQuery(50)),
+    // products = productsData?.products?.edges,
+    // collectionsData = await client(collectionsQuery(5)),
+    // collections = collectionsData?.collections?.edges;
 
-  return {
-    props: {
-      blogs: [],
-      products: [],
-      collections: [],
-    },
-    revalidate: 60,
-  };
+    return {
+        props: {
+            blogs: [],
+            products: [],
+            collections: [],
+        },
+        revalidate: 60,
+    };
 };
 
 export default Home;

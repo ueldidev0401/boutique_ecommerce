@@ -12,7 +12,7 @@ const FooterBottom = ({ bg }) => {
             pt={[15, null, null, 25]}
             pb={[10, null, null, 20]}
         >
-            <Container fluid style={{ backgroundColor: 'green'}}>
+            <Container fluid style={{ backgroundColor: 'green' }}>
                 {/* <Row className="flex-sm-row-reverse">
                     <Col md={3} className="text-center text-md-right" style={{ display: 'flex', flexDirection: 'row-reverse' }}>
                         <img src={replaceImg.src} style={{ margin: '1rem' }} />
@@ -35,7 +35,16 @@ const FooterBottom = ({ bg }) => {
                     </Col>
                 </Row> */}
                 <div className="customBottomMark">
-                    <img src={mark.src} style={{width: '100%', height: '100%'}}/>
+                    <img src={mark.src} style={{ width: '100%', height: '100%' }} />
+                </div>
+                <div className="customBottomCopyright">
+                    © 2021 mysouq. All rights reserved
+                </div>
+                <div className="customBottomTranslator">
+                    <img src={translateImg.src} style={{ width: "100%", height: '100%' }} />
+                </div>
+                <div className="customBottomTrack" >
+                    <img src={replaceImg.src} style={{ width: '100%', height: '100%'}} />
                 </div>
             </Container>
         </FooterBottomWrapper >

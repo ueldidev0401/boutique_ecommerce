@@ -394,21 +394,6 @@ const ProductsTab = ({ products, limit = 8, className }) => {
                         </Col>
                       </Row>
                     </div>}
-
-                  <div style={{
-                    position: 'fixed', bottom: 144, right: "4.6%", fontFamily: 'Saira',
-                    fontStyle: 'normal',
-                    fontWeight: 300,
-                    fontSize: '18px',
-                    lineHeight: '28px',
-                    textAlign: 'center',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    cursor: 'pointer',
-                  }} onClick={scrollToTop}>
-                    <BsChevronUp fontSize={'40px'} color='#9D9999' />
-                    TOP
-                  </div>
                 </>
               </div>
             </Col>

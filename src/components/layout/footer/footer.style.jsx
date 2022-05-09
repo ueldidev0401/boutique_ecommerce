@@ -17,7 +17,7 @@ export const CopyrightText = styled.p`
           color: ${themeGet('colors.primary')};
       }
   }
-  
+   
   svg{
       margin: 0 1px;
       vertical-align: middle;
@@ -38,8 +38,12 @@ export const WidgetWrapper = styled.div`
 `
 
 export const FooterWrap = styled.footer`
+position: relative;
   ${space};
   ${color};
+  background-color: #F2F2F2;
+  height: 80px;
+  width: 100%
 `
 export const SocialIcons = styled.ul`
   ${space};
