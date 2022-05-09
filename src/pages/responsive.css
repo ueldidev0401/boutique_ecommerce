@@ -510,7 +510,9 @@ footer {
     width: 100%;
     height: 100%;
 }
-
+.customModalFooterPlus :hover {
+    color: #E84242
+}
 .customModalFooterPrice {
     position: absolute;
     width: 14.74%;
@@ -533,7 +535,7 @@ footer {
     width: '5.3%';
     height: 54px;
     left: 11.33%;
-    top: 29.81px;
+    top: 36.81px;
 
     font-family: 'Roboto';
     font-style: normal;
@@ -546,31 +548,32 @@ footer {
 }
 
 .customModalFooterButton {
-    position: absolute;
+    position: relative;
     width: 28.8%;
-    height: 80.38px;
+    height: 60.38px;
     left: 60.37%;
     top: 7.8px;
-
+    margin-top: 10px;
     background: #E84242;
     border-radius: 5px;
 }
 
 .customModalFooterButtonTitle {
     position: relative;
-    width: 219px;
+    width: '19.6%';
     height: 55px;
-    /* left: 882px;
-    top: 1772px; */
-
     font-family: 'Saira';
     font-style: normal;
     font-weight: 400;
     font-size: 2.7vw;
     line-height: 63px;
     text-align: center;
-
     color: #FFFFFF;
+    display: -moz-box;
+    display: flex;
+    -moz-box-pack: center;
+    justify-content: center;
+    margin: auto;
 }
 @media screen and (max-width: 407px) {
     .customHeaderHelpLine {

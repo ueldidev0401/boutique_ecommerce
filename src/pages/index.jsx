@@ -26,7 +26,7 @@ const Home = ({ blogs, products, collections }) => {
                 <title>{settings?.title}</title>
                 <meta name="description" content={settings?.description} />
             </Head>
-            <div style={{
+            {/* <div style={{
                 position: 'fixed', bottom: 144, right: "4.6%", fontFamily: 'Saira',
                 fontStyle: 'normal',
                 fontWeight: 300,
@@ -40,7 +40,7 @@ const Home = ({ blogs, products, collections }) => {
             }} >
                 <BsChevronUp fontSize={'40px'} color='#9D9999' />
                 TOP
-            </div>
+            </div> */}
 
             <Row style={{ margin: 0}}>
                 <Col lg={12} xs={12} style={{ padding: 0 }}>
