@@ -15,8 +15,8 @@ const FormCheck = styled.div`
 
 const CheckboxButton = styled.input`
   margin: 0;
-  width: 1em;
-  height: 1em;
+  width: 1.25vw;
+  height: 1.25vw;
   cursor: pointer;
   appearance: none;
   vertical-align: top;

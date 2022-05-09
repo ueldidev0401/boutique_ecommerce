@@ -9,7 +9,14 @@ export const GlobalStyle = createGlobalStyle`
 
   html,
   body {
+    max-width: 1440px;
+    margin: auto;
     height: 100%;
+    overflow-x: hidden;
+  }
+
+  header {
+    height: 111px
   }
 
   body {
@@ -52,6 +59,12 @@ export const GlobalStyle = createGlobalStyle`
     text-decoration: none;
     background-color: transparent;
     transition: ${themeGet("transition")};
+  }
+
+  @media screen and (max-width: 407px) {
+    header {
+      height: 40.07px
+    }
   }
 
   a {
