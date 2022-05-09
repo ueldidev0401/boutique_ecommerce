@@ -21,7 +21,9 @@ import {
   HeaderActionBtn,
   HeaderBottomWrap,
 } from "@components/layout/header/header.style";
-
+import logo from '@assets/image/header/logo.svg';
+import bucket from '@assets/image/header/bucket.svg';
+import {VscMenu} from 'react-icons/vsc'
 const HeaderBottom = ({
   onConfigHandler,
   onMiniCartHandler,
@@ -34,83 +36,139 @@ const HeaderBottom = ({
   const isLoggedIn = useIsLoggedIn();
   return (
     <HeaderBottomWrap>
-      <Container style={{ maxWidth: '90%' }}>
-        <Row className="align-items-center header">
-          <Col xs={3} lg={3} className="d-lg-none">
-            <HeaderActionBtn onClick={() => onMobileNavHandler()}>
-              <AiOutlineMenu />
+      {/* <Container style={{ maxWidth: '90%' }}>
+      <Row className="align-items-center header">
+        <Col xs={3} lg={3} className="d-lg-none">
+          <HeaderActionBtn onClick={() => onMobileNavHandler()}>
+            <AiOutlineMenu />
+          </HeaderActionBtn>
+        </Col>
+        <Col xs={3} lg={4} className="text-left text-lg-left">
+          <div style={{
+            fontFamily: 'Rubik',
+            fontStyle: 'normal',
+            fontWeight: 400,
+            fontSize: '18px',
+            lineHeight: '21px',
+          }}>
+            Help Line
+          </div>
+          <div style={{
+            fontFamily: 'Rubik',
+            fontStyle: 'normal',
+            fontWeight: 400,
+            fontSize: '18px',
+            lineHeight: '21px',
+            color: '#ffcb65'
+          }}>
+            1-800-700-600
+          </div>
+        </Col>
+
+        <Col xs={4} lg={3} className="d-lg-none text-right">
+          <HeaderAction>
+            <ActionItem>
+              <HeaderActionBtn onClick={() => onSearchBoxHandler()}>
+                <IoSearchOutline />
+              </HeaderActionBtn>
+            </ActionItem>
+            <ActionItem>
+              <HeaderActionBtn onClick={() => onConfigHandler()}>
+                <AiOutlineSetting />
+              </HeaderActionBtn>
+            </ActionItem>
+          </HeaderAction>
+        </Col>
+        <Col xs={3} lg={4} className="text-center text-lg-center">
+          <Logo className="logo--desktop" src="/images/logo/logo.png" />
+
+          <Logo
+            width={100}
+            height={30}
+            className="logo--mobile"
+            src="/images/logo/logo.png"
+          />
+        </Col>
+
+        <Col xs={4} lg={4} className="d-none d-lg-block">
+          <HeaderAction>
+            <ActionItem>
+              <HeaderActionBtn onClick={() => onSearchBoxHandler()}>
+                <IoSearchOutline />
+              </HeaderActionBtn>
+            </ActionItem>
+
+            <ActionItem>
+              <HeaderActionBtn
+                className="pr-1"
+                onClick={() => onMiniCartHandler()}
+              >
+                <img src={cart.src} style={{ width: '79.8%' }} />
+                <CartItemCount>{4}</CartItemCount>
+              </HeaderActionBtn>
+            </ActionItem>
+          </HeaderAction>
+        </Col>
+      </Row>
+    </Container> */
+  /* <Container fluid style={{width:'100%'}}>
+    <div className="customHeader">
+      <div className="customHeaderHelpLine">
+        <p className="customHeaderHelpLineText">Help Line</p>
+        <p className="customHeaderHelpLineNumber">1-800-700-600</p>
+      </div>
+      <div className="customHeaderLogo">
+        <img src={logo.src} />
+      </div>
+      <div className="customHeaderSerach">
+        <IoSearchOutline />
+      </div>
+      <div className="customHeaderCart">
+        <HeaderAction>
+          <ActionItem>
+            <HeaderActionBtn onClick={() => onSearchBoxHandler()}>
+              <IoSearchOutline />
             </HeaderActionBtn>
-          </Col>
-          <Col xs={3} lg={4} className="text-left text-lg-left">
-            <div style={{
-              fontFamily: 'Rubik',
-              fontStyle: 'normal',
-              fontWeight: 400,
-              fontSize: '18px',
-              lineHeight: '21px',
-            }}>
-              Help Line
-            </div>
-            <div style={{
-              fontFamily: 'Rubik',
-              fontStyle: 'normal',
-              fontWeight: 400,
-              fontSize: '18px',
-              lineHeight: '21px',
-              color: '#ffcb65'
-            }}>
-              1-800-700-600
-            </div>
-          </Col>
+          </ActionItem>
 
-          <Col xs={4} lg={3} className="d-lg-none text-right">
-            <HeaderAction>
-              <ActionItem>
-                <HeaderActionBtn onClick={() => onSearchBoxHandler()}>
-                  <IoSearchOutline />
-                </HeaderActionBtn>
-              </ActionItem>
-              <ActionItem>
-                <HeaderActionBtn onClick={() => onConfigHandler()}>
-                  <AiOutlineSetting />
-                </HeaderActionBtn>
-              </ActionItem>
-            </HeaderAction>
-          </Col>
-          <Col xs={3} lg={4} className="text-center text-lg-center">
-            <Logo className="logo--desktop" src="/images/logo/logo.png" />
+          <ActionItem>
+            <HeaderActionBtn
+              className="pr-1"
+              onClick={() => onMiniCartHandler()}
+            >
+              <img src={cart.src} style={{ width: '79.8%' }} />
+              <CartItemCount>{4}</CartItemCount>
+            </HeaderActionBtn>
+          </ActionItem>
+        </HeaderAction>
+      </div>
+    </div>
+  </Container> */}
+      <>
+        <div className="customHeaderHelpLine">
+          <p className="customHeaderHelpLineText">Help Line</p>
+          <p className="customHeaderHelpLineNumber">1-800-700-600</p>
+        </div>
+        <div className="customeHeaderLogo">
+          <img src={logo.src} style={{ width: '100%', height: '100%' }} />
+        </div>
+        <div className="customHeaderSearch">
+          <IoSearchOutline onClick={() => onSearchBoxHandler()} style={{ width: '100%', height: '100%' }} />
+        </div>
+        <div className="customHeaderCart">
+          <img src={cart.src} style={{ width: '100%', height: '100%' }} />
+        </div>
+        <CartItemCount className="customHeaderBadge">{4}</CartItemCount>
+        <div className="customHeaderCartForMobile">
+          <img src={bucket.src} style={{ width: '100%', height: '100%' }} />
+        </div>
+        <div className="customHeaderMenuForMobile">
+          <VscMenu onClick={() => {
+            onMobileNavHandler()
+          }}/>
+        </div>
+      </>
 
-            <Logo
-              width={100}
-              height={30}
-              className="logo--mobile"
-              src="/images/logo/logo.png"
-            />
-          </Col>
-
-          <Col xs={4} lg={4} className="d-none d-lg-block">
-            <HeaderAction>
-              <ActionItem>
-                <HeaderActionBtn onClick={() => onSearchBoxHandler()}>
-                  <IoSearchOutline />
-                </HeaderActionBtn>
-              </ActionItem>
-
-              <ActionItem>
-                <HeaderActionBtn
-                  className="pr-1"
-                  onClick={() => onMiniCartHandler()}
-                >
-                  {/* <HiOutlineShoppingBag /> */}
-                  <img src={cart.src} style={{ width: '79.8%' }} />
-
-                  <CartItemCount>{4}</CartItemCount>
-                </HeaderActionBtn>
-              </ActionItem>
-            </HeaderAction>
-          </Col>
-        </Row>
-      </Container>
     </HeaderBottomWrap>
   );
 };

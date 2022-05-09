@@ -1,3 +1,8 @@
+body {
+    max-width: 1440px;
+    margin: auto;
+}
+
 footer {
     background-color: #F2F2F2;
 }
@@ -43,7 +48,7 @@ footer {
     /* background-color: red; */
     margin-top: -10px;
     box-shadow: 0 10px 16px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
-    
+    cursor: pointer;
 }
 
 .alice-carousel__stage-item {
@@ -82,4 +87,546 @@ footer {
 
 .custom-carousel {
     width: 100% !important;
+}
+
+.addCartBtn:hover {
+    color: #E84242;
+    cursor: pointer;
+}
+
+.category {
+    color: grey;
+    cursor: pointer;
+}
+
+.categoryIcon {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 25px;
+}
+
+.categoryName {
+    display: flex;
+    justify-content: center;
+}
+
+.gridCard {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 302px;
+}
+
+.gridCardImage {
+    width: 48.9%;
+    height: 100%;
+}
+
+.gridCardContent {
+    position: relative;
+    width: 51.1%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 5%;
+    padding-top: 29px;
+    padding-right: 2%;
+}
+
+.gridCardContentTitle {
+    font-family: Roboto;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 29px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.gridCardContentBrief {
+    margin-top: 12px;
+    font-family: Rubik;
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.gridCardContentPrice {
+    position: absolute;
+    bottom: 70px;
+    font-family: Roboto;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 29px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.gridCardContentAddCart {
+    position: absolute;
+    bottom: 13.5px;
+    right: 3%;
+    width: 12.6%;
+}
+
+
+.customHeaderHelpLine {
+    position: absolute;
+    width: 10%;
+    height: 45px;
+    left: 4.5%;
+    top: 44px;
+
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1vw;
+    line-height: 21px;
+
+    color: #000000;
+}
+
+.customHeaderHelpLineNumber {
+    color: #ffcb65
+}
+
+.customeHeaderLogo {
+    position: absolute;
+    width: 21.8%;
+    height: 100px;
+    left: 38.2%;
+    top: 9px;
+}
+
+.customHeaderSearch {
+    position: absolute;
+    width: 2.5%;
+    height: 30px;
+    left: 84.38%;
+    /* right: 13.54%; */
+    top: 47px;
+    /* bottom: 96.76%; */
+}
+
+.customHeaderCart {
+    position: absolute;
+    width: 2.5%;
+    height: 30px;
+    left: 91.32%;
+    /* right: 8.3%; */
+    top: 47px;
+    /* bottom: 97.7%; */
+}
+
+.customHeaderBadge {
+    position: absolute;
+    width: 1.5%;
+    /* height: 22px; */
+    left: 93%;
+    top: 30px !important;
+
+    background: #E84242;
+}
+
+.customHeaderCartForMobile {
+    display: none;
+}
+
+.customHeaderMenuForMobile {
+    display: none;
+}
+
+.cardDetailModal {
+    display: none;
+}
+
+.customModalHeader {
+    position: relative;
+    height: 86.84px;
+    background: #E8E7E7;
+}
+
+.customModalHeaderTitle {
+    position: absolute;
+    width: 34.6%;
+    height: 34.16px;
+    left: 5.4%;
+    top: 26.12px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1vw;
+    line-height: 33px;
+
+    color: #655454;
+}
+
+.customModalHeaderPrevious {
+    position: absolute;
+    height: 34px;
+    width: 18.8px;
+    left: 83.8%;
+    top: 27px;
+    color: #655454;
+}
+
+.customModalHeaderPrevious:hover {
+    cursor: pointer;
+    color: #E84242;
+}
+
+.customModalHeaderNext:hover {
+    cursor: pointer;
+    color: #E84242;
+}
+
+.customModalHeaderNext {
+    position: absolute;
+    left: 93.4%;
+    top: 27px;
+    height: 34px;
+    width: 18.8px;
+}
+
+.customModalBody {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.customModalBodySelect {
+    position: absolute;
+    top: 70.16px;
+    left: 4.3%;
+}
+
+.customModalBodyDescription {}
+
+.customModalBodyPrice {
+    position: absolute;
+    width: 178px;
+    height: 33px;
+    left: 4.8%;
+    display: flex;
+    flex-direction: row;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.5vw;
+    line-height: 33px;
+    /* identical to box height */
+    color: #655454;
+}
+
+.customModalBodyPriceOld {
+    position: absolute;
+    width: 178px;
+    height: 33px;
+    left: 50.8%;
+
+    font-family: 'Roboto';
+    font-style: normal;
+
+    font-weight: 700;
+    font-size: 1vw;
+    line-height: 33px;
+    text-decoration: line-through;
+    /* identical to box height */
+    color: #655454;
+}
+
+.customModalBodyBottom {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+
+.customModalBodyFooter {
+    position: relative;
+    display: flex;
+    flex-direction: row
+}
+
+.customBodalBodySelectOptions {
+    position: absolute;
+    left: 6.7%;
+    top: 67px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.38vw;
+    line-height: 23px;
+
+    color: #000000;
+}
+
+
+
+.custommodalBodySelectOptionsSize {
+    position: absolute;
+    top: 48px;
+    left: 6.7%;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.25vw;
+    line-height: 21px;
+
+    color: #000000;
+}
+
+.customModalBodySelectOptionsSizeOptions {
+    position: absolute;
+    top: 79px;
+    left: 9.7%;
+    line-height: 140.6%;
+}
+
+.customModalBodySelectOptionsSizePrice {
+    position: absolute;
+    /* left: 274px; */
+    left: 214%;
+    top: 79px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.25vw;
+    line-height: 140.6%;
+}
+
+
+
+
+
+.custommodalBodySelectOptionsColour {
+    position: absolute;
+    top: 179px;
+    left: 6.7%;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.25vw;
+    line-height: 21px;
+
+    color: #000000;
+}
+
+.customModalBodySelectOptionsColourOptions {
+    position: absolute;
+    top: 210px;
+    left: 9.7%;
+    line-height: 140.6%;
+}
+
+.customModalBodySelectOptionsColourPrice {
+    position: absolute;
+    /* left: 274px; */
+    left: 214%;
+    top: 210px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.25vw;
+    line-height: 140.6%;
+}
+
+
+
+
+.custommodalBodySelectOptionsExtra {
+    position: absolute;
+    top: 319px;
+    left: 6.7%;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.25vw;
+    line-height: 21px;
+
+    color: #000000;
+}
+
+.customModalBodySelectOptionsExtraOptions {
+    position: absolute;
+    top: 360px;
+    left: 9.7%;
+    line-height: 140.6%;
+}
+
+.customModalBodySelectOptionsExtraPrice {
+    position: absolute;
+    /* left: 274px; */
+    left: 214%;
+    top: 360px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.25vw;
+    line-height: 140.6%;
+}
+
+.customModalBodyDescriptionTitle {
+    font-size: 1.54vw;
+}
+
+.customModalBodyDescriptionContent {
+    margin-top: 40px;
+    font-size: 1.05vw;
+}
+
+.customModalBodyBottom {
+    position: absolute;
+    top: 1271px;
+    width: 100%;
+    height: 28px;
+    background-color: #DFDCDC;
+}
+
+.modal-content {
+    height: 100%;
+}
+
+.customModalFooter {
+    position: relative;
+    width: 100%;
+    height: 119.57px;
+    display: flex;
+}
+
+.customModalFooterPlus {
+    width: 100%;
+    height: 100%;
+}
+
+.customModalFooterPrice {
+    position: absolute;
+    width: 14.74%;
+    height: 55px;
+    left: 44.33%;
+    top: 19.81px;
+
+    font-family: 'Saira';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 63px;
+    text-align: center;
+
+    color: #655454;
+}
+
+.customModalFooterCounter {
+    position: absolute;
+    width: '5.3%';
+    height: 54px;
+    left: 11.33%;
+    top: 29.81px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2.77vw;
+    line-height: 47px;
+    text-align: center;
+
+    color: #000000;
+}
+
+.customModalFooterButton {
+    position: absolute;
+    width: 28.8%;
+    height: 80.38px;
+    left: 60.37%;
+    top: 7.8px;
+
+    background: #E84242;
+    border-radius: 5px;
+}
+
+.customModalFooterButtonTitle {
+    position: relative;
+    width: 219px;
+    height: 55px;
+    /* left: 882px;
+    top: 1772px; */
+
+    font-family: 'Saira';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2.7vw;
+    line-height: 63px;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+@media screen and (max-width: 407px) {
+    .customHeaderHelpLine {
+        display: none;
+    }
+
+    .customeHeaderLogo {
+        position: absolute;
+        width: 23.91%;
+        height: 31px;
+        left: 0px;
+        top: 5px;
+    }
+
+    .react-tabs {
+        display: none;
+    }
+    .filterby {
+        display: none !important;
+    }
+    .customHeaderCartForMobile {
+        display: flex;
+        position: absolute;
+        left: 80.34%;
+        /* right: 15.72%; */
+        top: 12px !important;
+    }
+
+    .customHeaderSearch {
+        display: none;
+    }
+
+    .customHeaderCart {
+        display: none;
+    }
+
+    .customHeaderBadge {
+        position: absolute;
+        width: 2.45% !important;
+        height: 10px !important;
+        left: 84.2%;
+        top: 10px !important;
+        font-family: 'Rubik';
+        font-style: normal !important;
+        font-weight: 400 !important;
+        font-size: 8px !important;
+        line-height: 9px !important;
+        text-align: center !important;
+    }
+
+    .customHeaderMenuForMobile {
+        display: flex;
+        position: absolute;
+        left: 91.3%;
+        top: 13.2px;
+    }
+
+    .custom-categories {
+        display: flex;
+        justify-content: center;
+    }
+
+    .custom-categories-button {
+        display: none;
+    }
 }

@@ -15,37 +15,77 @@ import slideImage from '@assets/image/body/section1/landing_image.png';
 import saleImage1 from '@assets/image/body/section1/sale_image1.png';
 import saleImage2 from '@assets/image/body/section1/sale_image2.png';
 import thirdImage from '@assets/image/body/section1/third_image.png';
+import { MdOutlineSportsBasketball } from 'react-icons/md';
+import { RiTShirt2Line } from 'react-icons/ri';
+import { GiChelseaBoot } from 'react-icons/gi';
+import { BsSmartwatch } from 'react-icons/bs';
+import { FaHatCowboySide } from 'react-icons/fa';
+import { BsHandbag } from 'react-icons/bs';
+import { GiDiamondRing } from 'react-icons/gi';
+import { CgHome } from 'react-icons/cg';
+import { BsEyeglasses } from 'react-icons/bs';
+import { useState } from 'react';
 
+import { useDispatch, useSelector } from "react-redux";
+import { setCurrentCategory } from "@global/slices/cardSlice";
 const handleDragStart = (e) => e.preventDefault();
-const items = [
-    <img src={slideImage.src} onDragStart={handleDragStart} role="presentation" style={{ height: '53px', marginRight: '10px' }} />,
-    <img src={saleImage2.src} onDragStart={handleDragStart} role="presentation" style={{ height: '53px', marginRight: '10px' }} />,
-    <img src={saleImage1.src} onDragStart={handleDragStart} role="presentation" style={{ height: '53px', marginRight: '10px' }} />,
-    <img src={thirdImage.src} onDragStart={handleDragStart} role="presentation" style={{ height: '53px', marginRight: '10px' }} />,
-    <img src={slideImage.src} onDragStart={handleDragStart} role="presentation" style={{ height: '53px', marginRight: '10px' }} />,
-    <img src={saleImage2.src} onDragStart={handleDragStart} role="presentation" style={{ height: '53px', marginRight: '10px' }} />,
-    <img src={saleImage1.src} onDragStart={handleDragStart} role="presentation" style={{ height: '53px', marginRight: '10px' }} />,
-    <img src={thirdImage.src} onDragStart={handleDragStart} role="presentation" style={{ height: '53px', marginRight: '10px' }} />,
-    <img src={slideImage.src} onDragStart={handleDragStart} role="presentation" style={{ height: '53px', marginRight: '10px' }} />,
-    <img src={saleImage2.src} onDragStart={handleDragStart} role="presentation" style={{ height: '53px', marginRight: '10px' }} />,
-    <img src={saleImage1.src} onDragStart={handleDragStart} role="presentation" style={{ height: '53px', marginRight: '10px' }} />,
-    <img src={thirdImage.src} onDragStart={handleDragStart} role="presentation" style={{ height: '53px', marginRight: '10px' }} />,
-];
+
+export const Category = ({ CategoryIcon, categoryName, key, categoryClick, categoryId }) => {
+    var [isActive, setIsActive] = useState(false);
+    var dispatch = useDispatch();
+    const cardReducer = useSelector((state) => state).cardReducer;
+
+    const handleClick = (categoryId) => {
+        dispatch(setCurrentCategory(categoryId));
+    }
+
+    console.log('key = ', key);
+    var borderBottomStyle;
+    cardReducer.currentCategory == categoryId ? borderBottomStyle = {
+        borderBottomStyle: 'solid',
+        borderBottomColor: '#E84242',
+        borderWidth: '3px'
+    } : {
+        borderBottomStyle: 'none',
+    };
+    return (
+        <div className="category" key={key} onClick={() => { handleClick(categoryId) }} style={borderBottomStyle}>
+            <div className="categoryIcon">
+                {CategoryIcon != undefined ? <CategoryIcon /> : null}
+            </div>
+            <div className="categoryName">{categoryName}</div>
+        </div>
+    )
+}
+
+const categoryItems = [
+    <Category CategoryIcon={MdOutlineSportsBasketball} categoryName="Sports &amp; Outdoors" key={1} categoryId={1}  />,
+    <Category CategoryIcon={GiChelseaBoot} categoryName="Shoes" key={2} categoryId={2} />,
+    <Category CategoryIcon={RiTShirt2Line} categoryName="Apparel" key={3} categoryId={3}/>,
+    <Category CategoryIcon={BsSmartwatch} categoryName="Wathces" key={4} categoryId={4} />,
+    <Category CategoryIcon={FaHatCowboySide} categoryName="Accessories" key={5} categoryId={5}/>,
+    <Category CategoryIcon={BsHandbag} categoryName="Bags" key={6} categoryId={6} />,
+    <Category CategoryIcon={GiDiamondRing} categoryName="Jewelry" key={7} categoryId={7} />,
+    <Category CategoryIcon={CgHome} categoryName="Home" key={8} categoryId={8}  />,
+    <Category CategoryIcon={BsEyeglasses} categoryName="Glass" key={9} categoryId={9} />,
+]
+
+
 
 const responsive = {
     desktop: {
         breakpoint: { max: 3000, min: 1024 },
-        items: 3,
-        slidesToSlide: 3 // optional, default to 1.
+        items: 4,
+        slidesToSlide: 1 // optional, default to 1.
     },
     tablet: {
         breakpoint: { max: 1024, min: 464 },
-        items: 2,
-        slidesToSlide: 2 // optional, default to 1.
+        items: 6,
+        slidesToSlide: 1 // optional, default to 1.
     },
     mobile: {
         breakpoint: { max: 464, min: 0 },
-        items: 1,
+        items: 2,
         slidesToSlide: 1 // optional, default to 1.
     }
 };
@@ -55,6 +95,7 @@ const responsive = {
 // }
 
 const CustomCategories = () => {
+    
     return (
         <Fragment>
             <Row>
@@ -80,14 +121,15 @@ const CustomCategories = () => {
                                 minimumTouchDrag={80}
                                 renderButtonGroupOutside={false}
                                 renderDotsOutside={false}
-                                shouldResetAutoplay= {false}
+                                shouldResetAutoplay={false}
+                                removeArrowOnDeviceType={["tablet", "mobile"]}
                                 responsive={{
                                     desktop: {
                                         breakpoint: {
                                             max: 3000,
                                             min: 1024
                                         },
-                                        items: 3,
+                                        items: 7,
                                         partialVisibilityGutter: 40
                                     },
                                     mobile: {
@@ -95,7 +137,7 @@ const CustomCategories = () => {
                                             max: 464,
                                             min: 0
                                         },
-                                        items: 1,
+                                        items: 2,
                                         partialVisibilityGutter: 30
                                     },
                                     tablet: {
@@ -111,8 +153,9 @@ const CustomCategories = () => {
                                 sliderClass=""
                                 slidesToSlide={1}
                                 swipeable
+
                             >
-                                {items.map(item => {
+                                {categoryItems.map(item => {
                                     return item
                                 })}
                             </Carousel>

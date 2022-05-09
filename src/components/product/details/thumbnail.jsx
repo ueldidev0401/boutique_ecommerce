@@ -13,7 +13,6 @@ const ProductDetailsThumb = ({thumbnails}) => {
             swiper: thumbsSwiper
         }
     }
-
     const thumbNavConfig = {
         freeMode: true,
         slidesPerView: 4,

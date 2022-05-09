@@ -15,8 +15,8 @@ const FormCheck = styled.div`
 
 const RadioButton = styled.input`
   margin: 0;
-  width: 1em;
-  height: 1em;
+  width: 1.25vw;
+  height: 1.25vw;
   cursor: pointer;
   appearance: none;
   vertical-align: top;
@@ -29,7 +29,7 @@ const RadioButton = styled.input`
   border: 1px solid ${themeGet('colors.primary')};
 
   &:checked {
-    background-color: ${themeGet('colors.primary')};
+    background-color: #E84242;
     background-image: url("/images/icons/circle-dot.svg");
   }
 `
@@ -38,7 +38,7 @@ const Radio = ({className, label, ...props}) => {
     return (
         <FormCheck className={cn(className)}>
             <RadioButton type="radio" {...props}/>
-            {label && <Label htmlFor={props?.id}>{label}</Label>}
+            {label && <Label htmlFor={props?.id} style={{fontSize: '1.25vw', lineHeight: '140.6%'}}>{label}</Label>}
         </FormCheck>
     );
 };
