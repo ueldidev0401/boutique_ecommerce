@@ -196,7 +196,7 @@ const ProductsTab = ({ products, limit = 8, className }) => {
                     <div className="ListViewCard">
                       <Row style={{ paddingLeft: '9%', paddingRight: '9%', marginBottom: '53px', width: '100%', marginRight: 0 }}>
 
-                  <Row
+                  {/* <Row
                     style={{
                       paddingLeft: "9%",
                       paddingRight: "9%",
@@ -277,7 +277,7 @@ const ProductsTab = ({ products, limit = 8, className }) => {
                         />
                       </div>
                     </Col>
-                  </Row>
+                  </Row> */}
                         <Col sm={3} style={{ display: 'flex', justifyContent: 'center' }} >
                           <div style={{ width: '267px', height: '409px' }}>
                             <CustomCard onCardClickHandle={(stuff) => { onHandleCardClick(stuff) }} stuff={{ photoUrl: nikeImage.src, title: 'NIKE', brief: 'Sportsware smooth men\'s \nSemi-Brushed Back Fleece Sweater', size: 'S, M, L, XL, 2XL', price: '£47.99' }} />
