@@ -1,15 +1,16 @@
 import styled, {devices, themeGet} from "@styled";
 
 export const FooterButtons = styled.div`
-  height: 50px;
+  height: 49px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 
+
   button {
     margin: 0;
     padding: 0;
-    color: white;
+    color: black;
     line-height: 1;
     font-size: 20px;
     text-align: center;
@@ -35,8 +36,11 @@ export const MobileFooterWrap = styled.div`
   width: 100%;
   display: none;
   position: fixed;
-  box-shadow: rgba(0, 0, 0, 0.3) 0 0 10px 0;
-  background-color: ${themeGet('colors.secondary')};
+  
+  background: rgba(242, 242, 242, 0.63);
+  border: 1px solid #EFEFEF;
+  box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.13);
+  backdrop-filter: blur(4px);
 
   ${devices.md} {
     display: block;

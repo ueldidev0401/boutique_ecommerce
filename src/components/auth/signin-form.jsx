@@ -40,35 +40,7 @@ const SigninForm = () => {
 
   const onFormSubmit = (e) => {
     e.preventDefault();
-    const target = e.target;
-    const variables = {
-      input: {
-        email: formData.email,
-        password: formData.password,
-      },
-    };
-    setIsLoading(true);
-    client(customerAccessTokenCreate(), variables).then((res) => {
-      setError([]);
-
-      if (res?.customerAccessTokenCreate?.customerUserErrors) {
-        setError(res?.customerAccessTokenCreate?.customerUserErrors);
-      }
-
-      if (res?.customerAccessTokenCreate?.customerAccessToken) {
-        target.reset();
-        const token =
-          res?.customerAccessTokenCreate?.customerAccessToken?.accessToken;
-        const expiresAt =
-          res?.customerAccessTokenCreate?.customerAccessToken?.expiresAt;
-        Cookie.set("access_token", encode(token), {
-          expires: totalDays(expiresAt),
-        });
-        router.push("/account");
-      }
-
-      setIsLoading(false);
-    });
+    
   };
 
   return (
@@ -126,7 +98,9 @@ const SigninForm = () => {
                     <Col md={6}>
                     </Col>
                     <Col md={6}>
-                        <Button>Check</Button>
+                        <Button onClick={() => {
+                          console.log('asdfasdf')
+                        }}>Check</Button>
                     </Col>
                     </Row>
                 </InputField>

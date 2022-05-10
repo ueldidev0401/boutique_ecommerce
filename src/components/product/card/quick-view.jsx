@@ -133,7 +133,7 @@ const QuickView = ({ product, isOpen, onHandler }) => {
                     </Col>
                 </Row>
                 <Row style={{ marginTop: '111px', marginLeft: '5.3%', marginRight: '6.8%', fontFamily: 'Saira' }}>
-                    <div class="customModalBodyDescription">
+                    <div className="customModalBodyDescription">
                         <p className="customModalBodyDescriptionTitle">Description</p>
                         <p className="customModalBodyDescriptionContent">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas finibus mi nec orci luctus, eu congue neque venenatis. Nunc tincidunt viverra mi elementum eleifend. Nunc fringilla felis lectus. Nunc feugiat ipsum id vestibulum rhoncus. Pellentesque at elementum lectus. Donec pulvinar justo non mi vehicula hendrerit. Phasellus blandit nunc vel felis cursus fermentum. Donec mattis sollicitudin commodo. Sed tellus leo, dignissim a diam et, fringilla tincidunt mauris. Vivamus quam tellus, maximus sit amet enim sed, porttitor bibendum lorem. Phasellus faucibus quam sit amet massa tincidunt faucibus
@@ -150,7 +150,7 @@ const QuickView = ({ product, isOpen, onHandler }) => {
                     position: 'absolute',
                     left: '6.1%',
                 }}>
-                    <HiOutlinePlus class="customModalFooterPlus" />
+                    <HiOutlinePlus className="customModalFooterPlus" />
 
                 </div>
 
@@ -161,14 +161,14 @@ const QuickView = ({ product, isOpen, onHandler }) => {
                     position: 'absolute',
                     left: '16.1%',
                 }}>
-                    <HiOutlineMinus class="customModalFooterPlus" />
+                    <HiOutlineMinus className="customModalFooterPlus" />
                 </div>
 
                 <p className="customModalFooterPrice">$12.50</p>
 
                 <div className="customModalFooterButton">
                     {/* <Button color="#E84242"><p className="customModalFooterButtonTitle">Add to Cart</p></Button> */}
-                    <a class="btn btn-primary customModalFooterButtonTitle">Add to Cart</a>
+                    <a className="btn btn-primary customModalFooterButtonTitle">Add to Cart</a>
                 </div>
 
                 <div style={{ 

@@ -10,7 +10,7 @@ const InstafeedGallery = ({ limit }) => {
   const access_token =
     "AQDGQDuju49yDXPBDZD-kJFX-nZjpev5CjRIMqpyEy5t3HHaV9Ii1Kk6EcDbyAXpR7YRPxLGJrHBZ6ccSLNfiCLFUXN0pTU-jqD0RmbymGgSRxEyteCTU8aepPOiDJc3BeUjaNQeTo7IXer-xst4Y5opBioTTS6yyDtDfRPmmde6XmUhhEz0nCsOaTIQXIL-1uT5gl72w9Nji48_S1IYSVLW9Roxou3OBTmJRcj_qOwHbw";
   const template =
-    '<a class="insta-cart-product" href="{{link}}" target="_blank"><figure><img alt="{{caption}}" src="{{image}}"/></figure></a>';
+    '<a className="insta-cart-product" href="{{link}}" target="_blank"><figure><img alt="{{caption}}" src="{{image}}"/></figure></a>';
 
   useEffect(() => {
     const feed = new Instafeed({

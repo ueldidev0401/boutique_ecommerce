@@ -1,5 +1,5 @@
 
-import {changeView, changeIsModalShow, setCurrentCategory, changeIsShowSearchModel} from "@slices/cardSlice";
+import {changeView, changeIsModalShow, setCurrentCategory, changeIsShowSearchModel, changeCurrentPage, changeIsCategoriesModalShow} from "@slices/cardSlice";
 
 export const changeViewAction = (payload) => (dispatch) => {
     dispatch(changeView(payload));
@@ -15,4 +15,12 @@ export const setCurrentCategoryAction = (payload) => (dispatch) => {
 
 export const changeIsShowSearchModelAction = (payload) => (dispatch) => {
     dispatch(changeIsShowSearchModel(payload));
+}
+
+export const changeCurrentPageAction = (payload) => (dispatch) => {
+    dispatch(changeCurrentPage(payload));
+}
+
+export const changeIsCategoriesModalShowAction = (payload) => (dispatch) => {
+    dispatch(changeIsCategoriesModalShow(payload));
 }

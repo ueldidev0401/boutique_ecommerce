@@ -6,6 +6,7 @@ import { ThemeProvider, theme } from "@styled";
 import { persistor, store } from "@global/store";
 import { GlobalStyle } from "@assets/css/global.style";
 import { PersistGate } from "redux-persist/integration/react";
+import { useState, useEffect } from "react";
 
 // CSS import
 import "swiper/swiper.scss";
@@ -27,6 +28,7 @@ import "@fontsource/montserrat";
 import "@fontsource/montserrat/500.css";
 // import 'react-alice-carousel/lib/alice-carousel.css';
 import 'react-multi-carousel/lib/styles.css';
+
 // Customize Bootstrap
 const themeBootstrap = {
   "$container-max-widths": {
@@ -38,6 +40,7 @@ const themeBootstrap = {
 };
 
 const FurnsAPP = ({ Component, pageProps }) => {
+
   return (
     <Fragment>
       <Head>

@@ -30,7 +30,7 @@ const SearchForm = ({ isShow, onHandler }) => {
 
   return (
     <SearchBoxWrap show={cardData.isShowSearchModel}>
-      <SearchBox style={{position: 'fixed', maxWidth: '1440px'}}>
+      <SearchBox style={{position: 'fixed', width: '100%'}} className="searchbox">
           <div className="form-wrap">
             <Form onSubmit={onSearchFormHandler}>
               <input type="text" placeholder="Search" className="searchInput" />
@@ -40,24 +40,26 @@ const SearchForm = ({ isShow, onHandler }) => {
                 <option value="opel">Opel</option>
                 <option value="audi">Audi</option>
               </select>
-              <SearchButton type="submit" onClick={onSearchFormHandler}>
+              <SearchButton color="#E84242" type="submit" className="searchsubmit" onClick={onSearchFormHandler}>
                 <IoSearchOutline />
               </SearchButton>
               <div
                 className="close_search"
                 onClick={() => dispatch(changeIsShowSearchModelAction(false))}
               >
-                <div>
+                <div className="close_search_icon">
                   <img
                     style={{
                       marginLeft: "auto",
                       marginRight: "auto",
-                      display: "block"
+                      display: "block",
+                      width: "100%",
+                      height: '100%'
                     }}
                     src={scrollTop.src}
                   />
                 </div>
-                <div style={{ textAlign: "center", paddingTop: "10px" }}>close</div>
+                <div style={{ textAlign: "center", paddingTop: "10px" }} className="close_search_text">close</div>
               </div>
             </Form>
           </div>

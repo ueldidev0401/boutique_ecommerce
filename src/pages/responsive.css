@@ -1,8 +1,3 @@
-body {
-    max-width: 1440px;
-    margin: auto;
-}
-
 footer {
     background-color: #F2F2F2;
 }
@@ -510,9 +505,11 @@ footer {
     width: 100%;
     height: 100%;
 }
+
 .customModalFooterPlus :hover {
     color: #E84242
 }
+
 .customModalFooterPrice {
     position: absolute;
     width: 14.74%;
@@ -575,9 +572,95 @@ footer {
     justify-content: center;
     margin: auto;
 }
+
+.searchsubmit {
+    background: #E84242 !important;
+    border-radius: 1px !important;
+}
+
 @media screen and (max-width: 407px) {
     .customHeaderHelpLine {
         display: none;
+    }
+
+    .searchbox {
+        margin-top: 40px !important;
+        height: 55px !important;
+    }
+
+    .searchInput {
+        position: absolute !important;
+        margin-left: 6.3% !important;
+        top: 15px !important;
+        width: 40.54% !important;
+        height: 25px !important;
+    }
+
+    .selectoption {
+        position: absolute !important;
+        margin-left: 46.84% !important;
+        top: 15px !important;
+        width: 32.92% !important;
+        height: 25px !important;
+    }
+
+    .searchsubmit {
+        position: absolute !important;
+        top: 16px !important;
+        width: 8.35% !important;
+        height: 23px !important;
+        /* right: 51px !important; */
+        left: 21px !important;
+    }
+
+    .close_search {
+        position: absolute !important;
+        top: 20px !important;
+        right: 14px !important;
+        width: 5.9% !important;
+        height: 16px !important;
+    }
+
+    .close_search_text {
+        position: absolute !important;
+        font-family: 'Saira';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 10px;
+        line-height: 16px;
+        padding-top: 6px !important;
+    }
+
+    .getDirectionText {
+        display: none !important;
+    }
+
+    .getDirectionButton {
+        position: absolute !important;
+        bottom: 12px !important;
+        right: 8.1% !important;
+        width: 5.6% !important;
+        height: 16px !important;
+    }
+
+    .bussinessName {
+        position: absolute !important;
+        bottom: 12px !important;
+        left: 8.1% !important;
+        width: 5.6% !important;
+        height: 16px !important;
+    }
+
+    .getDirectionButtonTextIcon {
+        width: 100% !important;
+        height: 100% !important;
+        padding: 2px !important;
+    }
+
+    .close_search_icon {
+        position: absolute !important;
+        width: 100% !important;
+        height: 5px !important;
     }
 
     .customeHeaderLogo {
@@ -643,6 +726,14 @@ footer {
     .custom-categories-button {
         display: none;
     }
+
+    .thirdImageForMobile {
+        display: flex !important;
+    }
+
+    .thirdImageForDesktop {
+        display: none !important;
+    }
 }
 
 .customBottomMark {
@@ -652,6 +743,7 @@ footer {
     left: 5.7%;
     bottom: 10px;
 }
+
 .customBottomTrack {
     position: absolute;
     width: 1.87%;
@@ -659,6 +751,7 @@ footer {
     left: 92.7%;
     bottom: 26px;
 }
+
 .customBottomCopyright {
     position: absolute;
     width: 29.3%;
@@ -687,4 +780,345 @@ footer {
 
 .customHeaderSearchIcon {
     cursor: pointer;
+}
+
+.getDirectionButton {
+    position: absolute;
+    width: 13.33%;
+    height: 50px;
+    right: 5.7%;
+    bottom: 27px;
+    background: #FFFFFF;
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 2px;
+}
+
+.getDirectionButtonText {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    height: 100%;
+    cursor: pointer;
+    justify-content: center;
+    font-family: 'Signika Negative';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: #605E5E;
+}
+
+.getDirectionButton :hover {
+    top: -10px;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.MobileNavIcon {
+    position: relative;
+    left: 17px;
+    top: 9px;
+    width: 7.95%;
+    height: 20.62px;
+    color: #000000;
+}
+
+.translator {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    top: 90px;
+    margin-left: 8.3%;
+}
+
+.translatorImg {
+    position: absolute;
+    display: flex;
+    width: 8.8%;
+    height: 23px;
+}
+
+.tanslatorName {
+    position: absolute;
+    display: flex;
+
+    left: 14.2%;
+
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 13px;
+
+    color: #000000;
+}
+
+.connectTo {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    margin-left: 12.27%;
+    margin-top: 270px;
+}
+
+.whatsapp {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 12.7%;
+    height: 26.88px;
+    margin-right: 5.3%;
+    color: #595656;
+}
+
+.instagram {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 12.7%;
+    height: 26.88px;
+    margin-right: 5.3%;
+
+    color: #595656;
+}
+
+.facebook {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 12.7%;
+    height: 26.88px;
+    margin-right: 5.3%;
+
+    color: #595656;
+}
+
+.helpline {
+    position: absolute;
+    top: 52.97px;
+    left: 0;
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 13px;
+}
+
+.helplineText {
+    color: #000000;
+}
+
+.helplineNumber {
+    color: #E84242;
+}
+
+.copyrightForMobile {
+    position: absolute;
+    width: 166px;
+    height: 16px;
+    top: 108.97px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 12px;
+    text-align: center;
+
+    color: #000000;
+}
+
+
+
+
+.bussinessName {
+    position: absolute;
+    width: 42.63%;
+    height: 107px;
+    left: 6.1%;
+    bottom: 16px;
+
+}
+
+.bussinessNameTitle {
+    font-family: 'Saira';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 79px;
+
+    color: #FFFFFF;
+}
+
+.bussinessNameInfo {
+    font-family: 'Saira';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+
+    color: #FFFFFF;
+}
+
+
+.customCategorisModal {
+    background: rgba(253, 253, 253, 0.47);
+    border: 1px solid #CCCCCC;
+    backdrop-filter: blur(36px)
+}
+
+.customCategorisModalHeader {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    height: 41px;
+    background: #E8E7E7;
+}
+
+.customCategorisModalHeaderTitle {
+    position: absolute;
+    left: 7.89%;
+    top: 13px;
+
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 12px;
+
+    color: #000000;
+
+}
+
+.customCategorisModalHeaderCloseBtn {
+    position: absolute;
+    right: 3.8%;
+    top: 10px;
+    width: 5.28%;
+    height: 21px;
+    color: #E84242;
+}
+
+.customCategorisModalBodyCategoryList {
+    height: 41px;
+    display: flex;
+    margin: auto;
+    width: 100%;
+    justify-content: center;
+    align-items: center
+}
+
+.TrackOrderTitle {
+    position: absolute;
+    height: 64px;
+    top: 75px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    font-family: 'Saira';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 63px;
+    text-align: center;
+
+    color: #737373;
+}
+
+.trackDetailHeaderCloseBtn {
+    position: absolute;
+    width: 6.5%;
+    height: 21px;
+    right: 0;
+}
+
+.trackDetailHeader {
+    position: relative;
+    width: 100%;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+}
+
+.trackDetailBody {
+    position: relative;
+    width: 100%;
+    height: 290px;
+}
+
+.trackDetailFooter {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 2.4%;
+    padding-right: 2.4%;
+}
+.btn-close {
+    width: 10%;
+    height: 35px;
+    background-color: RGB(108,117,125);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btn-pink {
+    width: 20%;
+    height: 35px;
+    background-color: RGB(230, 67,117);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.trackDetailBody {
+    border: 1px solid grey;
+}
+.trackDetailBodyTableHeader {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    border-style: solid;
+    border-width: 1px;
+    border-color: grey;
+}
+.trackDetailBodyTableRow {
+    display: flex;
+    flex-direction: row;
+}
+.trackDetailBodyTableRow {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    border-style: solid;
+    border-width: 1px;
+    border-color: grey;
+    background-color: #dddddd;
+}
+.trackDetailBodyTableDetail {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    height: 170px;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    border-style: solid;
+    border-width: 1px;
+    border-color: grey;
 }

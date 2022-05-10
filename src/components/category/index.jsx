@@ -4,7 +4,7 @@ import Image from "@components/ui/image";
 import {placeholder} from "@utils/constant";
 import {CategoryItem, CatItemInner, CatName} from "./category.style";
 
-const Category = ({category, icon, slug}) => {
+const Category = ({category, icon, slug, key}) => {
     return (
         <Link href={slug} passHref>
             <CategoryItem>

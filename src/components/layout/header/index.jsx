@@ -5,7 +5,7 @@ import {DesktopNavbar as Navbar} from "@components/layout/navbar";
 import {HeaderArea} from "@components/layout/header/header.style";
 import HeaderBottom from "@components/layout/header/header-bottom";
 
-const Header = ({bg, className, onMiniCartHandler, onSearchBoxHandler, onMobileNavHandler, onConfigHandler}) => {
+const Header = ({bg, className, onMiniCartHandler, onSearchBoxHandler, onMobileNavHandler, onConfigHandler, mobileNavHandleStatus}) => {
     return (
         <HeaderArea className={cn('header', className)}>
             {/* <HeaderTop
@@ -17,6 +17,7 @@ const Header = ({bg, className, onMiniCartHandler, onSearchBoxHandler, onMobileN
                 onMiniCartHandler={onMiniCartHandler}
                 onSearchBoxHandler={onSearchBoxHandler}
                 onMobileNavHandler={onMobileNavHandler}
+                mobileNavHandleStatus={mobileNavHandleStatus}
             />
 
             {/* <Navbar

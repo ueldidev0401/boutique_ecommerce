@@ -57,6 +57,7 @@ const Layout = ({children, bg, ...props}) => {
                 onMiniCartHandler={onMiniCartHandler}
                 onSearchBoxHandler={onSearchBoxHandler}
                 onMobileNavHandler={onMobileNavHandler}
+                mobileNavHandleStatus={isShowMobileNav}
             />
 
             {/* <CartButton

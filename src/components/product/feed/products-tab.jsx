@@ -56,6 +56,7 @@ import CustomCategories from "@components/customcategories";
 import FilterBy from "@components/filterBy";
 import { LoginFormWrap } from "@components/auth/auth.style";
 import { BsChevronUp } from 'react-icons/bs';
+import { changeCurrentPageAction } from "@global/actions/cardActions";
 
 import CustomGridCard from "@components/customGridCard";
 import CustomProductModal from "@components/customProductModal";
@@ -89,11 +90,19 @@ const ProductsTab = ({ products, limit = 8, className }) => {
   const [isModalShow, setIsModalShow] = useState(false);
   const [currentStuff, setCurrentStuff] = useState(undefined);
   const cardReducer = useSelector((state) => state).cardReducer;
-  useEffect(() => {
-    // dispatch(getSampleData());
-    // console.log('sampleListData = ', sampleListData);
-  }, [dispatch]);
-
+  // useEffect(() => {
+  //   // dispatch(getSampleData());
+  //   // console.log('sampleListData = ', sampleListData);
+  //    window.addEventListener("scroll", () => {
+  //     if(window.scrollY > 1000){
+  //       // setscrollView(!scrollView)
+  //       setVisible(true);
+  //     } else {
+  //       setVisible(false)
+  //     }
+  //   }, false)
+      
+  // }, []);
   const toggleVisible = () => {
     console.log('toggleVisible');
     const scrolled = document.documentElement.scrollTop;
@@ -119,10 +128,6 @@ const ProductsTab = ({ products, limit = 8, className }) => {
     });
   };
 
-  // window.addEventListener('scroll', toggleVisible);
-  window.addEventListener('scroll', () => {
-    console.log('here');
-  });
 
   const onHandler = (key) => {
     switch (key) {
@@ -132,12 +137,14 @@ const ProductsTab = ({ products, limit = 8, className }) => {
         setStyle("lie");
         setStyle_nabcontact("lie");
         setFlag(0);
+        dispatch(changeCurrentPageAction(1));
         break;
       case "about":
         setData(getFeaturedProducts(products));
         setStyle("common");
         setStyle_nabshop("lie");
         setStyle_nabcontact("lie");
+        dispatch(changeCurrentPageAction(2));
         setFlag(1);
         break;
       default:
@@ -145,10 +152,12 @@ const ProductsTab = ({ products, limit = 8, className }) => {
         setStyle_nabcontact("common");
         setStyle("lie");
         setStyle_nabshop("lie");
+        dispatch(changeCurrentPageAction(3));
         setFlag(2);
         break;
     }
   };
+
 
   const onHandleCardClick = (stuff) => {
     console.log('here')
@@ -184,7 +193,7 @@ const ProductsTab = ({ products, limit = 8, className }) => {
         )}
 
         <Row>
-          {flag == 0 ? (
+          {cardReducer.currentPage == 1 ? (
             <Col>
               <div style={{ marginTop: "48px" }}>
                 <>
@@ -195,89 +204,6 @@ const ProductsTab = ({ products, limit = 8, className }) => {
                   {!cardReducer.isGridView ?
                     <div className="ListViewCard">
                       <Row style={{ paddingLeft: '9%', paddingRight: '9%', marginBottom: '53px', width: '100%', marginRight: 0 }}>
-
-                  {/* <Row
-                    style={{
-                      paddingLeft: "9%",
-                      paddingRight: "9%",
-                      marginBottom: "53px",
-                      width: "100%",
-                      marginRight: 0,
-                    }}
-                  >
-                    <Col
-                      sm={3}
-                      style={{ display: "flex", justifyContent: "center" }}
-                    >
-                      <div style={{ width: "267px", height: "409px" }}>
-                        <CustomCard
-                          stuff={{
-                            photoUrl: nikeImage.src,
-                            title: "NIKE",
-                            brief:
-                              "Sportsware smooth men's Semi-Brushed Back Fleece Sweater",
-                            size: "S, M, L, XL, 2XL",
-                            price: "$33",
-                            oldPrice: "$44",
-                          }}
-                        />
-                      </div>
-                    </Col>
-                    <Col
-                      sm={3}
-                      style={{ display: "flex", justifyContent: "center" }}
-                    >
-                      <div style={{ width: "267px", height: "409px" }}>
-                        <CustomCard
-                          stuff={{
-                            photoUrl: nikeImage.src,
-                            title: "NIKE",
-                            brief:
-                              "Sportsware smooth men's Semi-Brushed Back Fleece Sweater",
-                            size: "S, M, L, XL, 2XL",
-                            price: "$33",
-                            oldPrice: "$44",
-                          }}
-                        />
-                      </div>
-                    </Col>
-                    <Col
-                      sm={3}
-                      style={{ display: "flex", justifyContent: "center" }}
-                    >
-                      <div style={{ width: "267px", height: "409px" }}>
-                        <CustomCard
-                          stuff={{
-                            photoUrl: nikeImage.src,
-                            title: "NIKE",
-                            brief:
-                              "Sportsware smooth men's Semi-Brushed Back Fleece Sweater",
-                            size: "S, M, L, XL, 2XL",
-                            price: "$33",
-                            oldPrice: "$44",
-                          }}
-                        />
-                      </div>
-                    </Col>
-                    <Col
-                      sm={3}
-                      style={{ display: "flex", justifyContent: "center" }}
-                    >
-                      <div style={{ width: "267px", height: "409px" }}>
-                        <CustomCard
-                          stuff={{
-                            photoUrl: nikeImage.src,
-                            title: "NIKE",
-                            brief:
-                              "Sportsware smooth men's Semi-Brushed Back Fleece Sweater",
-                            size: "S, M, L, XL, 2XL",
-                            price: "$33",
-                            oldPrice: "$44",
-                          }}
-                        />
-                      </div>
-                    </Col>
-                  </Row> */}
                         <Col sm={3} style={{ display: 'flex', justifyContent: 'center' }} >
                           <div style={{ width: '267px', height: '409px' }}>
                             <CustomCard onCardClickHandle={(stuff) => { onHandleCardClick(stuff) }} stuff={{ photoUrl: nikeImage.src, title: 'NIKE', brief: 'Sportsware smooth men\'s \nSemi-Brushed Back Fleece Sweater', size: 'S, M, L, XL, 2XL', price: '£47.99' }} />
@@ -369,7 +295,7 @@ const ProductsTab = ({ products, limit = 8, className }) => {
                       </Row>
                     </div> :
                     <div className="GridViewCard">
-                      <Row style={{ marginBottom: '30px' }}>
+                      <Row style={{ marginBottom: '30px', marginLeft: '4.86%', marginRight: '8%' }}>
                         <Col sm={6}>
                           <CustomGridCard stuff={{ photoUrl: nikeImage.src, title: 'NIKE', brief: 'Sportsware smooth men\'s \nSemi-Brushed Back Fleece Sweater', size: 'S, M, L, XL, 2XL', price: '£47.99' }} />
                         </Col>
@@ -377,7 +303,7 @@ const ProductsTab = ({ products, limit = 8, className }) => {
                           <CustomGridCard stuff={{ photoUrl: nikeImage.src, title: 'NIKE', brief: 'Sportsware smooth men\'s \nSemi-Brushed Back Fleece Sweater', size: 'S, M, L, XL, 2XL', price: '£47.99' }} />
                         </Col>
                       </Row>
-                      <Row style={{ marginBottom: '30px' }}>
+                      <Row style={{ marginBottom: '30px', marginLeft: '4.86%', marginRight: '8%' }}>
                         <Col sm={6}>
                           <CustomGridCard stuff={{ photoUrl: nikeImage.src, title: 'NIKE', brief: 'Sportsware smooth men\'s \nSemi-Brushed Back Fleece Sweater', size: 'S, M, L, XL, 2XL', price: '£47.99' }} />
                         </Col>
@@ -385,7 +311,7 @@ const ProductsTab = ({ products, limit = 8, className }) => {
                           <CustomGridCard stuff={{ photoUrl: nikeImage.src, title: 'NIKE', brief: 'Sportsware smooth men\'s \nSemi-Brushed Back Fleece Sweater', size: 'S, M, L, XL, 2XL', price: '£47.99' }} />
                         </Col>
                       </Row>
-                      <Row style={{ marginBottom: '30px' }}>
+                      <Row style={{ marginBottom: '30px', marginLeft: '4.86%', marginRight: '8%' }}>
                         <Col sm={6}>
                           <CustomGridCard stuff={{ photoUrl: nikeImage.src, title: 'NIKE', brief: 'Sportsware smooth men\'s \nSemi-Brushed Back Fleece Sweater', size: 'S, M, L, XL, 2XL', price: '£47.99' }} />
                         </Col>
@@ -397,7 +323,7 @@ const ProductsTab = ({ products, limit = 8, className }) => {
                 </>
               </div>
             </Col>
-          ) : flag == 1 ? (
+          ) : cardReducer.currentPage == 2 ? (
             <>
               <Col md={1} lg={1}></Col>
               <Col md={10} lg={10}>
@@ -465,9 +391,9 @@ const ProductsTab = ({ products, limit = 8, className }) => {
                 <div>
                   {/* <CheckoutForm /> */}
                 </div>
-                <div>
+                {/* <div>
                   <SigninForm />
-                </div>
+                </div> */}
                 <div style={{ marginTop: "48px" }}>
                   <Row>
                     <Col md={5} sm={5}>

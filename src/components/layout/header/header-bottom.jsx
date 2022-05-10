@@ -25,12 +25,13 @@ import logo from '@assets/image/header/logo.svg';
 import bucket from '@assets/image/header/bucket.svg';
 import {VscMenu} from 'react-icons/vsc'
 import {useRouter} from "next/router";
-
+import {MdClose} from 'react-icons/md';
 const HeaderBottom = ({
   onConfigHandler,
   onMiniCartHandler,
   onSearchBoxHandler,
   onMobileNavHandler,
+  mobileNavHandleStatus
 }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const router = useRouter();
@@ -157,7 +158,7 @@ const HeaderBottom = ({
           <img src={logo.src} style={{ width: '100%', height: '100%' }} onClick={() => {router.push('/')}} />
         </div>
         <div className="customHeaderSearch">
-          <IoSearchOutline onClick={() => onSearchBoxHandler()} class="customHeaderSearchIcon" style={{ width: '100%', height: '100%' }} />
+          <IoSearchOutline onClick={() => onSearchBoxHandler()} className="customHeaderSearchIcon" style={{ width: '100%', height: '100%' }} />
         </div>
         <div className="customHeaderCart" onClick={() => {router.push('/checkout')}}>
           <img src={cart.src} style={{ width: '100%', height: '100%' }} />
@@ -167,9 +168,13 @@ const HeaderBottom = ({
           <img src={bucket.src} style={{ width: '100%', height: '100%' }} />
         </div>
         <div className="customHeaderMenuForMobile">
-          <VscMenu onClick={() => {
-            onMobileNavHandler()
-          }}/>
+          {
+           !mobileNavHandleStatus ? <VscMenu onClick={() => {
+              onMobileNavHandler()
+            }}/> : <MdClose onClick={() => {
+              onMobileNavHandler()
+            }}/>
+          }
         </div>
       </>
 

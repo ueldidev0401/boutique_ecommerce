@@ -9,10 +9,7 @@ export const GlobalStyle = createGlobalStyle`
 
   html,
   body {
-    max-width: 1440px;
-    margin: auto;
     height: 100%;
-    overflow-x: hidden;
   }
   main {
     padding-top: 111px;
@@ -20,14 +17,15 @@ export const GlobalStyle = createGlobalStyle`
   header {
     position: fixed;
     z-index: 111;
-    max-width: 1440px;
     width: 100%;
     background-color: white;
     height: 111px;
     width: 100%;
     box-shadow: 0px 2px 30px 1px rgba(0, 0, 0, 0.14);
   }
-
+  footer {
+    // margin-top: 0px !important;
+  }
   body {
     font-style: normal;
     position: relative;
@@ -76,6 +74,9 @@ export const GlobalStyle = createGlobalStyle`
     }
     main {
       padding-top: 40.07px
+    }
+    footer {
+      display: none;
     }
   }
 

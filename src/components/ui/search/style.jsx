@@ -40,7 +40,7 @@ export const SearchBox = styled.div`
       padding-top: 11px;
       padding-bottom:11px;
       background-color:white;
-      border-color:white;
+      border: 1px solid rgba(207, 206, 206, 0.53);
     }
     .selectoption{
       width:14%;
@@ -48,9 +48,17 @@ export const SearchBox = styled.div`
       position: absolute;
       margin-left:61%;
       top:28px;
+      border: 1px solid rgba(207, 206, 206, 0.53);
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 10px;
+      line-height: 12px;
+      text-align: center;
+
+      color: #655454;
     }
     .close_search{
-      width:3%;
         height:50px;
         cursor: pointer;
         z-index:99;

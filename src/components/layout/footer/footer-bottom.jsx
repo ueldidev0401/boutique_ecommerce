@@ -5,7 +5,10 @@ import { CopyrightText, FooterBottomWrapper } from "./footer.style";
 import mark from '@assets/image/footer/footer_fist.png';
 import translateImg from '@assets/image/footer/translate.png'
 import replaceImg from '@assets/image/footer/replace.png'
+import { useRouter } from "next/router";
+
 const FooterBottom = ({ bg }) => {
+    const router = useRouter();
     return (
         <FooterBottomWrapper
             bg={bg}
@@ -43,7 +46,7 @@ const FooterBottom = ({ bg }) => {
                 <div className="customBottomTranslator">
                     <img src={translateImg.src} style={{ width: "100%", height: '100%' }} />
                 </div>
-                <div className="customBottomTrack" >
+                <div className="customBottomTrack" onClick={() => {router.push('/track')}}>
                     <img src={replaceImg.src} style={{ width: '100%', height: '100%'}} />
                 </div>
             </Container>

@@ -1,4 +1,4 @@
-import {addToCart, removeCart, increment, decrement, clear} from "@slices/cartSlice";
+import {addToCart, removeCart, increment, decrement, clear, } from "@slices/cartSlice";
 
 export const addToCartAction = (payload) => (dispatch) => {
     dispatch(addToCart(payload));

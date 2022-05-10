@@ -68,7 +68,6 @@ export const OffCanvasInner = styled.div`
   position: relative;
   transform: translateX(100%);
   transition: ${themeGet("transition")};
-  background-color: ${themeGet("colors.white")};
   ${layout};
 `;
 
@@ -78,13 +77,13 @@ export const OffCanvasOverlay = styled.div`
   top: 0;
   right: 0;
   bottom: 0;
-  height: 100%;
+  height: 730px;
   width: 100%;
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
   cursor: pointer;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(249, 246, 246, 0.82);
 `;
 
 export const OffCanvasWrap = styled.aside`
@@ -92,11 +91,13 @@ export const OffCanvasWrap = styled.aside`
   visibility: hidden;
   pointer-events: none;
   position: fixed;
-  top: 0;
+  top: 40.1px;
   right: 0;
-  height: 100vh;
-  width: 100vw;
+  height: 83.3%;
+  width: 68.05%;
   z-index: 9999;
+  backdrop-filter: blur(20px);
+  overflow-y: auto;
   transition: ${themeGet("transition")};
   font-size: ${themeGet("fontSizes.standard")};
   font-weight: ${themeGet("fontWeights.body")};

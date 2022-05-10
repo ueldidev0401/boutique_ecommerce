@@ -48,6 +48,7 @@ const Categories = ({categories, className, ...props}) => {
                                     category={category?.title}
                                     icon={category?.image?.originalSrc}
                                     slug={`/collection/${category?.handle}`}
+                                    key={category?.id}
                                 />
                             </Slide>
                         ))}
