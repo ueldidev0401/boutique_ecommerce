@@ -90,45 +90,8 @@ const ProductsTab = ({ products, limit = 8, className }) => {
   const [isModalShow, setIsModalShow] = useState(false);
   const [currentStuff, setCurrentStuff] = useState(undefined);
   const cardReducer = useSelector((state) => state).cardReducer;
-  // useEffect(() => {
-  //   // dispatch(getSampleData());
-  //   // console.log('sampleListData = ', sampleListData);
-  //    window.addEventListener("scroll", () => {
-  //     if(window.scrollY > 1000){
-  //       // setscrollView(!scrollView)
-  //       setVisible(true);
-  //     } else {
-  //       setVisible(false)
-  //     }
-  //   }, false)
-      
-  // }, []);
-  const toggleVisible = () => {
-    console.log('toggleVisible');
-    const scrolled = document.documentElement.scrollTop;
-    if (scrolled > 100) {
-      setVisible(true)
-    }
-    else if (scrolled <= 300) {
-      setVisible(false)
-    }
-  };
-
-  const scrollToTop = () => {
-    // window.scrollTo({
-    //   top: 0,
-    //   behavior: 'smooth'
-    //   /* you can also use 'auto' behaviour
-    //      in place of 'smooth' */
-    // });
-    window.scroll({
-      top: 0,
-      left: 0,
-      behavior: 'smooth'
-    });
-  };
-
-
+  
+  
   const onHandler = (key) => {
     switch (key) {
       case "shop":
@@ -188,11 +151,11 @@ const ProductsTab = ({ products, limit = 8, className }) => {
                 </li>
               </ul>
             </ProductNav>
-            <hr style={{ width: "80%" }}></hr>
+            <hr style={{ width: "88.8%" }}></hr>
           </Tabs>
         )}
 
-        <Row>
+        <Row style={{marginTop: '113px'}}>
           {cardReducer.currentPage == 1 ? (
             <Col>
               <div style={{ marginTop: "48px" }}>

@@ -23,6 +23,10 @@ const CustomCard = ({ stuff, style, onCardClickHandle }) => {
         <Fragment>
             <Container className="card" style={{ border: '1px solid #E8E8E8', padding: '0', borderRadius: '5px', fontFamily: 'Saira', height: '100%' }} onClick={() => {
                 dispatch(changeIsModalShowAction(true));
+            }} onMouseOver={(e) => {
+                e.currentTarget.getElementsByTagName('svg')[0].style.color = "#E84242";
+            }} onMouseLeave={(e) => {
+                e.currentTarget.getElementsByTagName('svg')[0].style.color = "black";
             }}>
                 <Row style={{ width: '100%', height: '70%', margin: 0 }}>
                     <Col md={12} style={{ padding: 0, height: '100%' }}>
@@ -30,7 +34,7 @@ const CustomCard = ({ stuff, style, onCardClickHandle }) => {
                     </Col>
                 </Row>
                 <Row style={{ height: '5%', marginLeft: '1%' }}>
-                    <Col style={{ fontWeight: '20px' }}>
+                    <Col style={{ fontWeight: '20px', fontFamily: 'Saira' }}>
                         {title}
                     </Col>
                 </Row>

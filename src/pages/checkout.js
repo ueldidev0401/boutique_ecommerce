@@ -6,11 +6,16 @@ import settings from "@data/settings.json";
 const CheckOutScreen = () => {
     return (
         <Layout>
-            <Head>
-                <title>{settings?.title}</title>
-                <meta name="description" content={settings?.description} />
-            </Head>
-            <CustomCheckOutFirst />
+            <div style={{ position: 'relative', width: '100%', height: '1044px' }}>
+                <Head>
+                    <title>{settings?.title}</title>
+                    <meta name="description" content={settings?.description} />
+                    <link rel="preconnect" href="https://fonts.googleapis.com" />
+                    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+                    <link href="https://fonts.googleapis.com/css2?family=Saira:wght@100&display=swap" rel="stylesheet" />
+                </Head>
+                <CustomCheckOutFirst />
+            </div>
         </Layout>
     )
 }

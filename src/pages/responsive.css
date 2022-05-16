@@ -34,6 +34,8 @@ footer {
 
 .custom-categories-button :hover {
     background-color: #918c8c;
+    cursor: pointer;
+
 }
 
 .card {
@@ -343,6 +345,7 @@ footer {
     position: relative;
     display: flex;
     flex-direction: row;
+    padding-left: 4.3%;
 }
 
 .customModalBodyFooter {
@@ -507,7 +510,8 @@ footer {
 }
 
 .customModalFooterPlus :hover {
-    color: #E84242
+    color: #E84242;
+    cursor: pointer;
 }
 
 .customModalFooterPrice {
@@ -1056,10 +1060,11 @@ footer {
     padding-left: 2.4%;
     padding-right: 2.4%;
 }
+
 .btn-close {
     width: 10%;
     height: 35px;
-    background-color: RGB(108,117,125);
+    background-color: RGB(108, 117, 125);
     color: white;
     display: flex;
     justify-content: center;
@@ -1067,10 +1072,11 @@ footer {
     border-radius: 5px;
     cursor: pointer;
 }
+
 .btn-pink {
     width: 20%;
     height: 35px;
-    background-color: RGB(230, 67,117);
+    background-color: RGB(230, 67, 117);
     color: white;
     display: flex;
     justify-content: center;
@@ -1078,9 +1084,11 @@ footer {
     border-radius: 5px;
     cursor: pointer;
 }
+
 .trackDetailBody {
     border: 1px solid grey;
 }
+
 .trackDetailBodyTableHeader {
     width: 100%;
     display: flex;
@@ -1093,10 +1101,12 @@ footer {
     border-width: 1px;
     border-color: grey;
 }
+
 .trackDetailBodyTableRow {
     display: flex;
     flex-direction: row;
 }
+
 .trackDetailBodyTableRow {
     width: 100%;
     display: flex;
@@ -1110,6 +1120,7 @@ footer {
     border-color: grey;
     background-color: #dddddd;
 }
+
 .trackDetailBodyTableDetail {
     width: 100%;
     display: flex;
@@ -1121,4 +1132,401 @@ footer {
     border-style: solid;
     border-width: 1px;
     border-color: grey;
+}
+
+.checkoutTitle {
+    position: absolute;
+    width: 100%;
+    top: 76px;
+    font-family: 'Saira';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 63px;
+    text-align: center;
+    color: #737373;
+    display: flex;
+    justify-content: center;
+}
+
+.checkoutBodyOrderType {
+    position: absolute;
+    top: 143px;
+
+    font-family: 'Saira';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 19px;
+    /* identical to box height */
+
+    color: #000000;
+}
+
+.checkoutBodyOrderSelect {
+    position: absolute;
+    width: 37.14%;
+    height: 19px;
+    top: 177px;
+
+    font-family: 'Saira';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 19px;
+    /* identical to box height */
+
+
+    color: #655454;
+}
+
+.checkoutBodyValidCardText {
+    position: absolute;
+    top: 221px;
+
+    font-family: 'Saira';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 19px;
+    /* identical to box height */
+
+
+    color: #655454;
+}
+
+.checkoutBodyOrderHr {
+    position: absolute;
+    width: 77.14%;
+    height: 0px;
+    top: 671px;
+
+    border: 0.5px solid #ADAAAA;
+    transform: rotate(180deg);
+}
+
+.checkoutBodyOrderInputCoupoun {
+    position: absolute;
+    top: 732px;
+    width: 37.14%;
+    height: 34px;
+    font-family: 'Saira';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 19px;
+    /* identical to box height */
+
+
+    color: #9D9999;
+}
+
+.checkoutBodyOrderApplyBtn {
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 13.8%;
+    height: 34px;
+    left: 50.88%;
+    top: 732px;
+
+    background: #E84242;
+    border: 1px solid #E84242;
+    border-radius: 5px;
+}
+
+.checkoutBodyPrice {
+    position: absolute;
+    width: 298px;
+    left: 48.4%;
+    top: 784px;
+
+    font-family: 'Saira';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 39px;
+    text-align: right;
+
+    color: #5E5D5D;
+}
+
+.checkoutBodyOrderDetail {
+    box-sizing: border-box;
+    position: relative;
+    width: 91.38%;
+    height: 121px;
+    border: 1px solid #CCCCCC;
+    border-radius: 5px;
+}
+
+.checkoutBodyOrderDetailDelete {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    width: 8.62%;
+    height: 121px;
+    right: 0px;
+    color: #9D9999;
+}
+
+.checkoutBodyOrderDetailDeleteIcon {
+    position: absolute;
+    width: 42.93%;
+    height: 21.16px;
+    right: 0px;
+    color: #9D9999;
+}
+
+.checkoutBodyOrderDetailDeleteIcon:hover {
+    cursor: pointer;
+    color: #E84242;
+}
+
+.checkoutBodyOrderDetailImage {
+    position: absolute;
+    width: 15.91%;
+    height: 90px;
+}
+
+.checkoutBodyOrderDetailLeft {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    padding-left: 1.07%;
+    padding-top: 12px;
+    padding-bottom: 19px;
+    padding-right: 1.07%;
+}
+
+.checkoutBodyOrderDetailInfo {
+    position: relative;
+    left: 22.98%;
+    width: 41.85%;
+
+    font-family: 'Saira';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.25vw;
+    line-height: 28px;
+
+    color: #6F6D6D;
+}
+
+.checkoutBodyOrderDetailTitle {
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.checkoutBodyOrderDetailSize {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    font-weight: 300;
+}
+
+.checkoutBodyOrderDetailPlus {
+    position: absolute;
+    left: 59.76%;
+    top: 45px;
+    width: 5%;
+    font-family: 'Saira';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.73vw;
+    line-height: 39px;
+
+    color: #5E5D5D;
+}
+
+.checkoutBodyOrderDetailPlus:hover {
+    color: RGB(230, 67, 117);
+    cursor: pointer;
+}
+
+.checkoutBodyOrderDetailMinus {
+    position: absolute;
+    left: 69.76%;
+    top: 45px;
+    width: 5%;
+    font-family: 'Saira';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.73vw;
+    line-height: 39px;
+
+    color: #5E5D5D;
+}
+
+.checkoutBodyOrderDetailMinus:hover {
+    color: RGB(230, 67, 117);
+    cursor: pointer;
+
+}
+
+.checkoutBodyOrderDetailCount {
+    position: absolute;
+    right: 32%;
+    font-size: 2.2vw;
+    top: 37px;
+    font-family: 'Saira';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 39px;
+
+    color: #5E5D5D;
+}
+
+.checkoutBodyOrderDetailPrice {
+    position: absolute;
+    right: 3%;
+    font-family: 'Saira';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 39px;
+    font-size: 2.2vw;
+    top: 37px;
+    color: #5E5D5D;
+}
+
+.checkoutBodyStep {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 47.66%;
+    align-items: center;
+
+    top: 205px
+}
+
+.checkoutBodyStepOne {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    background-color: #E84242;
+    width: 32px;
+    height: 32px;
+    border-radius: 250px;
+    /* height: 10%; */
+    text-align: center;
+    color: white;
+    margin: auto;
+    align-items: center;
+    border-color: #E84242;
+    border-style: solid;
+    border-width: 1px;
+
+    left: 0;
+}
+
+.checkoutBodyStepTwo {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    width: 32px;
+    height: 32px;
+    border-radius: 250px;
+    /* height: 10%; */
+    text-align: center;
+    color: #E84242;
+    margin: auto;
+    align-items: center;
+    border-color: #E84242;
+    border-style: solid;
+    border-width: 1px;
+
+    right: 0;
+}
+
+.checkoutBodyStepLine {
+    position: absolute;
+    height: 1px;
+    width: 76%;
+    background-color: #E84242;
+}
+
+.checkoutBodyFormFullName {
+    position: absolute;
+    top: 266px;
+    width: 80.28%;
+
+    font-family: 'Saira';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 19px;
+    color: #000000;
+}
+
+.checkoutBodyPhoneNumberAndEmail {
+    position: absolute;
+    display: flex;
+    width: 80.28%;
+    top: 336px;
+    justify-content: space-between;
+}
+
+.checkoutBodyPhoneNumber {
+    width: 48.23%;
+}
+
+.checkoutBodyEmail {
+    width: 48.23%;
+}
+
+.checkoutBodyDeliveryAddress {
+    position: absolute;
+    top: 409px;
+    width: 80.28%;
+
+    font-family: 'Saira';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 19px;
+    color: #000000;
+}
+
+.checkoutBodyMap {
+    position: absolute;
+    width: 82.28%;
+    top: 484px;
+}
+
+.checkoutBodyNextBtn {
+    position: absolute;
+    width: 18.48%;
+    height: 34px;
+    top: 741px;
+    right: 8.8%;
+}
+
+.checkoutSmile {
+    position: absolute;
+    width: 7.3%;
+    height: 54px;
+    top: 278px;
+}
+
+.checkoutOrderText{
+    position: absolute;
+    width: 39.3%;
+    top: 351px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 15px;
+    text-align: center;
+
+    color: #000000;
+}
+.checkoutQRcode {
+    position: absolute;
+    width: 30.13%;
+    height: 215px;
+    top: 416px;
 }

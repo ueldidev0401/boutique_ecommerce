@@ -68,13 +68,17 @@ export const TextInCardNumber = styled.p`
 
 export const InputCoupoun = styled.input`
   outline: 0;
-  border-width: 0 0 2px;
-  border-color: grey;
-  padding-bottom: 10px;
+  border-width: 0 0 1px;
+  border-color: #adaaaa;
   font-size: 18px;
   background: transparent;
-  margin-bottom: 40px;
-  width: 50%;
+  width: 37.14%;
+  font-family: 'Saira';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 19px;
+  top: 732px;
   &:focus {
     border-color: #ea596e;
   }

@@ -10,6 +10,7 @@ export const GlobalStyle = createGlobalStyle`
   html,
   body {
     height: 100%;
+    font-family: Saira
   }
   main {
     padding-top: 111px;
@@ -24,7 +25,7 @@ export const GlobalStyle = createGlobalStyle`
     box-shadow: 0px 2px 30px 1px rgba(0, 0, 0, 0.14);
   }
   footer {
-    // margin-top: 0px !important;
+    margin-top: 0px !important;
   }
   body {
     font-style: normal;

@@ -20,6 +20,10 @@ const CustomGridCard = ({ stuff, style, onCardClickHandle }) => {
         <Fragment>
             <Container className="card" style={{ border: '1px solid #E8E8E8', padding: '0', borderRadius: '2%', fontFamily: 'Saira', height: '100%' }} onClick={() => {
                 dispatch(changeIsModalShowAction(true));
+            }} onMouseOver={(e) => {
+                e.currentTarget.getElementsByTagName('svg')[0].style.color = "#E84242";
+            }} onMouseLeave={(e) => {
+                e.currentTarget.getElementsByTagName('svg')[0].style.color = "black";
             }}>
                 <div className="gridCard">
                     <div className="gridCardImage">

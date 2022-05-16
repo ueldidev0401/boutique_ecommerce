@@ -55,6 +55,9 @@ const Home = ({ blogs, products, collections }) => {
             <Head>
                 <title>{settings?.title}</title>
                 <meta name="description" content={settings?.description} />
+                <link rel="preconnect" href="https://fonts.googleapis.com" />
+                <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+                <link href="https://fonts.googleapis.com/css2?family=Saira:wght@100&display=swap" rel="stylesheet" />
             </Head>
             <div style={{
                 position: 'fixed', bottom: 144, right: "4.6%", fontFamily: 'Saira',
@@ -93,7 +96,7 @@ const Home = ({ blogs, products, collections }) => {
                     <img src={saleImage2.src} style={{ width: '100%', height: '100%' }} />
                 </Col>
             </Row>
-            <Row style={{ marginTop: '1%', marginRight: '0', marginLeft: '0' }}>
+            <Row style={{ marginTop: '1%', marginRight: '0', marginLeft: '0', marginBottom: '96px' }}>
                 <Col lg={12} xs={12} style={{ paddingLeft: '0.5%', paddingRight: '1%' }}>
                     <img src={thirdImage.src} style={{ width: '100%', height: '100%' }} className="thirdImageForDesktop" />
                     <img src={mobile_pagination.src} style={{ width: '100%', height: '100%', display: 'none' }} className="thirdImageForMobile" />
@@ -101,7 +104,7 @@ const Home = ({ blogs, products, collections }) => {
             </Row>
             <ProductsTab products={products} limit={8} />
 
-                <CategoriesModal isOpen={!cardReducer.isCategoriesModalSHow} />
+            <CategoriesModal isOpen={!cardReducer.isCategoriesModalSHow} />
 
             {/* <Slider animate={true} data={sliderData}/>
  size
